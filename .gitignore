@@ -1,0 +1,7 @@
+.scannerwork
+.vscode
+__pycache__
+venv
+app/uploads/*
+!app/uploads/__init__.py
+.python-version
