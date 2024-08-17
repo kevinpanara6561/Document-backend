@@ -1,6 +1,8 @@
 import os
 import random
 from datetime import datetime
+import secrets
+import string
 from uuid import uuid4
 import boto3
 import phonenumbers
@@ -63,6 +65,20 @@ def file_cleanup():
 
 def remove_file(path):
     os.remove(path)
+    
+def generate_verification_token(length: int = 50) -> str:
+    """
+    Generates a secure random string for email verification.
+
+    Args:
+        length (int): The length of the verification token. Default is 50 characters.
+
+    Returns:
+        str: The generated verification token.
+    """
+    characters = string.ascii_letters + string.digits
+    token = ''.join(secrets.choice(characters) for _ in range(length))
+    return token
     
 
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")

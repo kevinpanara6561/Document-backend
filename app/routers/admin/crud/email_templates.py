@@ -71,3 +71,80 @@ def forgot_password(name: str, otp: str):
     html = html.replace("###NAME###", name)
     html = html.replace("###OTP###", otp)
     return html
+
+
+def send_verify_email(name: str, verification_link: str):
+    html = """
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                background-color: #ffffff;
+                margin: 50px auto;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 500px;
+            }
+            .header {
+                background-color: #4CAF50;
+                padding: 10px;
+                border-radius: 8px 8px 0 0;
+                text-align: center;
+                color: white;
+            }
+            .content {
+                margin: 20px 0;
+                text-align: center;
+            }
+            .verify-link {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+            .footer {
+                text-align: center;
+                font-size: 12px;
+                color: #777;
+                margin-top: 20px;
+            }
+            .footer a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Email Verification</h2>
+            </div>
+            <div class="content">
+                <p>Hi ###NAME###,</p>
+                <p>Thank you for registering! Please click the button below to verify your email address and complete your registration:</p>
+                <a href="###VERIFICATION_LINK###" class="verify-link">Verify Email</a>
+                <p>If the button doesn't work, copy and paste the following link into your browser:</p>
+                <p><a href="###VERIFICATION_LINK###">###VERIFICATION_LINK###</a></p>
+            </div>
+            <div class="footer">
+                <p>If you didn't sign up for this account, please ignore this email or <a href="#">contact support</a>.</p>
+            </div>
+        </div>
+    </body>
+</html>
+    """
+    html = html.replace("###NAME###", name)
+    html = html.replace("###VERIFICATION_LINK###", verification_link)
+    return html

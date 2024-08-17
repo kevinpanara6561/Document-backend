@@ -21,6 +21,7 @@ class AdminUserModel(Base):
     phone = Column(String(15), nullable=False)
     password = Column(String(255), nullable=False)
     is_registered = Column(Boolean, nullable=False, default=False)
+    verification_token = Column(String(50), nullable=True)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now)

@@ -10,9 +10,9 @@ from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from dotenv import load_dotenv
 from app.libs.emails import send_email
-from app.libs.utils import date_time_diff_min, generate_id, generate_otp, now
+from app.libs.utils import date_time_diff_min, generate_id, generate_otp, generate_verification_token, now
 from app.models import AdminUserModel, AdminUserOtpModel
-from app.routers.admin.crud.email_templates import forgot_password
+from app.routers.admin.crud.email_templates import forgot_password, send_verify_email
 from app.routers.admin.schemas import (
     AdminUserChangePassword,
     AdminUserResetPassword,
@@ -99,26 +99,61 @@ def get_admin_user_by_email(db: Session, email: str):
 def register(db: Session, request: Register):
     db_admin_user = get_admin_user_by_email(db, email=request.email)
     if db_admin_user:
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT)
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="User already exists")
     
+    # Create the admin user
     admin_user = AdminUserModel(
-        id = generate_id(),
-        name = request.name,
-        email = request.email,
-        phone = request.phone,
-        password = create_password(request.password),
+        id=generate_id(),
+        name=request.name,
+        email=request.email,
+        phone=request.phone,
+        password=create_password(request.password),
     )
     
+    # Add user to the database
     db.add(admin_user)
     db.commit()
+    db.refresh(admin_user)
     
-    return admin_user
+    # Generate a verification token and link
+    verification_token = generate_verification_token()
+    verification_link = f"http://127.0.0.1:8005/verify-email?token={verification_token}"
+    
+    # Store the verification token in the database (you may need to add a field for it)
+    admin_user.verification_token = verification_token
+    db.commit()
+    
+    # Send verification email
+    email_content = send_verify_email(admin_user.name, verification_link)
+    send_email([admin_user.email], "Verify your email address", email_content)
+    
+    return {"message": "User registered successfully. Please check your email to verify your account."}
+
+
+def verify_email(db: Session, token: str):
+    print(token)
+    user = db.query(AdminUserModel).filter(AdminUserModel.verification_token == token).first()
+    print(user)
+    
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Invalid or expired token")
+    
+    if user.is_registered:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="User already registered")
+    
+    user.is_registered = True
+    user.verification_token = None
+    db.commit()
+    
+    return {"message": "Email verified successfully"}
 
 def sign_in(db: Session, admin_user: Login) -> LoginResponse:
     db_admin_user = get_admin_user_by_email(db, email=admin_user.email)
     if db_admin_user is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
     elif db_admin_user.is_deleted:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
+    elif db_admin_user.is_registered is False:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
     hashed = db_admin_user.password.encode("utf-8")
     # hashed = bytes(hashed.encode, "utf-8")
