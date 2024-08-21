@@ -1,8 +1,8 @@
 """model added
 
-Revision ID: 135246763082
+Revision ID: c16d2d284247
 Revises: 
-Create Date: 2024-08-17 17:05:42.767339
+Create Date: 2024-08-20 12:02:07.149572
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '135246763082'
+revision = 'c16d2d284247'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -46,6 +46,8 @@ def upgrade():
     sa.Column('file_path', sa.String(length=255), nullable=False),
     sa.Column('file_type', sa.String(length=100), nullable=False),
     sa.Column('admin_user_id', sa.String(length=36), nullable=False),
+    sa.Column('is_priroty', sa.Boolean(), nullable=False),
+    sa.Column('status', sa.Enum('PENDING', 'INPROCESS', 'CLASSIFIED', 'EXTRACTED', 'COMPLETED', name='invoicestatusenum'), nullable=False),
     sa.Column('is_deleted', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),

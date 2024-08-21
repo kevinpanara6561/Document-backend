@@ -1,4 +1,5 @@
 from datetime import datetime
+import enum
 
 from sqlalchemy import (
     Boolean,
@@ -6,11 +7,28 @@ from sqlalchemy import (
     DateTime,
     ForeignKey,
     String,
-    JSON
+    JSON,
+    Enum
 )
 from sqlalchemy.orm import relationship
 
 from app.database import Base
+
+
+class InvoiceStatusEnum(enum.Enum):
+    """
+    PENDING
+    INPROCESS
+    CLASSIFIED
+    EXTRACTED
+    COMPLETED
+    """
+
+    PENDING = "PENDING"
+    INPROCESS = "INPROCESS"
+    CLASSIFIED = "CLASSIFIED"
+    EXTRACTED = "EXTRACTED"
+    COMPLETED = "COMPLETED"
 
 class AdminUserModel(Base):
     __tablename__ = "admin_users"
@@ -45,6 +63,8 @@ class InvoiceModel(Base):
     file_path = Column(String(255), nullable=False)
     file_type = Column(String(100), nullable=False)
     admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=False)
+    is_priroty = Column(Boolean, nullable=False, default=False)
+    status = Column(Enum(InvoiceStatusEnum), nullable=False, default=InvoiceStatusEnum.PENDING)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now)
