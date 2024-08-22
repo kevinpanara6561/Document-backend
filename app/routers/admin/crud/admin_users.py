@@ -117,7 +117,7 @@ def register(db: Session, request: Register):
     
     # Generate a verification token and link
     verification_token = generate_verification_token()
-    verification_link = f"http://127.0.0.1:8008/verify-email?token={verification_token}"
+    verification_link = f"http://54.209.245.52:8000/verify-email?token={verification_token}"
     
     # Store the verification token in the database (you may need to add a field for it)
     admin_user.verification_token = verification_token

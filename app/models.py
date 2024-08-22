@@ -60,6 +60,7 @@ class InvoiceModel(Base):
     __tablename__ = "invoices"
     
     id = Column(String(36), primary_key=True)
+    name = Column(String(100), nullable=False)
     file_path = Column(String(255), nullable=False)
     file_type = Column(String(100), nullable=False)
     admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=False)
@@ -77,6 +78,7 @@ class ExtractedDataModel(Base):
     id = Column(String(36), primary_key=True)
     data = Column(JSON, nullable=True)
     invoice_id = Column(String(36), ForeignKey("invoices.id"), nullable=True)
+    classification_result = Column(String(255), nullable=False)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now)

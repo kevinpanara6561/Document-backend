@@ -1,8 +1,8 @@
 """model added
 
-Revision ID: c16d2d284247
+Revision ID: 5a9557801b1e
 Revises: 
-Create Date: 2024-08-20 12:02:07.149572
+Create Date: 2024-08-22 06:28:13.495393
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'c16d2d284247'
+revision = '5a9557801b1e'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -43,6 +43,7 @@ def upgrade():
     )
     op.create_table('invoices',
     sa.Column('id', sa.String(length=36), nullable=False),
+    sa.Column('name', sa.String(length=100), nullable=False),
     sa.Column('file_path', sa.String(length=255), nullable=False),
     sa.Column('file_type', sa.String(length=100), nullable=False),
     sa.Column('admin_user_id', sa.String(length=36), nullable=False),
@@ -58,6 +59,7 @@ def upgrade():
     sa.Column('id', sa.String(length=36), nullable=False),
     sa.Column('data', sa.JSON(), nullable=True),
     sa.Column('invoice_id', sa.String(length=36), nullable=True),
+    sa.Column('classification_result', sa.String(length=255), nullable=False),
     sa.Column('is_deleted', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),

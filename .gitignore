@@ -6,3 +6,4 @@ app/uploads/*
 !app/uploads/__init__.py
 .python-version
 .env
+logs

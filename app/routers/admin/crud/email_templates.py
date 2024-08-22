@@ -135,8 +135,6 @@ def send_verify_email(name: str, verification_link: str):
                 <p>Hi ###NAME###,</p>
                 <p>Thank you for registering! Please click the button below to verify your email address and complete your registration:</p>
                 <a href="###VERIFICATION_LINK###" class="verify-link">Verify Email</a>
-                <p>If the button doesn't work, copy and paste the following link into your browser:</p>
-                <p><a href="###VERIFICATION_LINK###">###VERIFICATION_LINK###</a></p>
             </div>
             <div class="footer">
                 <p>If you didn't sign up for this account, please ignore this email or <a href="#">contact support</a>.</p>
