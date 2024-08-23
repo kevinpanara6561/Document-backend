@@ -131,9 +131,14 @@ class ChangePassword(BaseModel):
     
 class InvoiceResponse(BaseModel):
     id: str
+    name: str
     file_path: str
     file_type: str
     admin_user_id: str
 
     class Config:
         orm_mode = True
+        
+class InvoiceResponseList(BaseModel):
+    count: int
+    data: List[InvoiceResponse]

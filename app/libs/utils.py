@@ -5,8 +5,10 @@ import secrets
 import string
 from uuid import uuid4
 import boto3
+from fastapi import HTTPException
 import phonenumbers
 from sqlalchemy import inspect
+from botocore.exceptions import NoCredentialsError
 
 
 def now():
@@ -96,3 +98,20 @@ def connect_to_aws_service(service_name):
     )
     
     return service, AWS_BUCKET
+
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+)
+
+def generate_presigned_url(file_path: str) -> str:
+    try:
+        response = s3_client.generate_presigned_url(
+            'get_object',
+            Params={'Bucket': AWS_BUCKET, 'Key': file_path},
+            ExpiresIn=3600  # URL expiry time in seconds
+        )
+    except NoCredentialsError:
+        raise HTTPException(status_code=500, detail="Credentials not available")
+    return response

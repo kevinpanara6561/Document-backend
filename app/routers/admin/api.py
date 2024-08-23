@@ -162,13 +162,30 @@ def confirm_forgot_password(
 @router.post(
     "/upload-invoice",
     status_code=status.HTTP_200_OK,
-    response_model=schemas.InvoiceResponse,
+    response_model=List[schemas.InvoiceResponse],
     tags=["Invoices"],
 )
-def upload_invoice(token: str = Header(None), file: UploadFile = File(...), db: Session = Depends(get_db)):
+def upload_invoice(token: str = Header(None), files: List[UploadFile] = File(...), db: Session = Depends(get_db)):
     """
     url: `/upload-invoice`
+    Upload multiple invoices
     """
     db_admin_user = admin_users.verify_token(db, token=token)
-    data = invoices.upload_invoice(db, file, db_admin_user.id)
+    
+    # Upload multiple files
+    data = invoices.upload_invoices(db, files, db_admin_user.id)
+    
     return data
+
+@router.get("/invoices", response_model=schemas.InvoiceResponseList)
+def list_invoices(
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+    start: int = Query(0, ge=0),
+    limit: int = Query(10, ge=1)
+):
+    admin_users.verify_token(db, token=token)
+    
+    # Fetch invoices with pagination
+    paginated_invoices = invoices.get_invoices(db, start=start, limit=limit)
+    return paginated_invoices
