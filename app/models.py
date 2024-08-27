@@ -65,6 +65,7 @@ class InvoiceModel(Base):
     file_type = Column(String(100), nullable=False)
     admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=False)
     is_priroty = Column(Boolean, nullable=False, default=False)
+    password = Column(String(255), nullable=True)
     status = Column(Enum(InvoiceStatusEnum), nullable=False, default=InvoiceStatusEnum.PENDING)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)

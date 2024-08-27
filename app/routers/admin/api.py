@@ -5,6 +5,7 @@ from fastapi import (
     APIRouter,
     Depends,
     File,
+    Form,
     Header,
     HTTPException,
     Path,
@@ -165,15 +166,18 @@ def confirm_forgot_password(
     response_model=List[schemas.InvoiceResponse],
     tags=["Invoices"],
 )
-def upload_invoice(token: str = Header(None), files: List[UploadFile] = File(...), db: Session = Depends(get_db)):
+def upload_invoice(token: str = Header(None), 
+                   files: List[UploadFile] = File(...), 
+                   db: Session = Depends(get_db), 
+                   password: Optional[str] = Form(None)):
     """
     url: `/upload-invoice`
-    Upload multiple invoices
+    Upload multiple invoices with optional password protection.
     """
     db_admin_user = admin_users.verify_token(db, token=token)
     
-    # Upload multiple files
-    data = invoices.upload_invoices(db, files, db_admin_user.id)
+    # Upload multiple files with password if provided
+    data = invoices.upload_invoices(db, files, db_admin_user.id, password=password)
     
     return data
 

@@ -1,3 +1,4 @@
+import io
 import os
 from botocore.exceptions import NoCredentialsError, ClientError
 
@@ -25,19 +26,26 @@ s3_client, bucket_name = connect_to_aws_service(service_name="s3")
 
 #     return True
 
-def upload_file_to_s3(file_obj, bucket_name, object_name):
+def upload_file_to_s3(file_obj, bucket_name, object_name, content_type=None):
     s3_client = boto3.client('s3')
     
     try:
-        # Upload the file object directly to S3
+        if isinstance(file_obj, bytes):
+            # If file_obj is bytes, convert it to a file-like object
+            file_obj = io.BytesIO(file_obj)
+        
+        # Set default content type if not provided
+        content_type = content_type or 'application/octet-stream'
+
+        # Upload the file object to S3
         s3_client.upload_fileobj(
-            Fileobj=file_obj.file,  # file_obj.file gives you the file-like object
+            Fileobj=file_obj,  # file_obj is now a file-like object
             Bucket=bucket_name,
             Key=object_name,
-            ExtraArgs={'ContentType': file_obj.content_type}  # Optional: Preserve the file content type
+            ExtraArgs={'ContentType': content_type}  # Preserve content type
         )
         
-        # Construct the S3 URL
+        # Construct and return the S3 URL
         s3_url = object_name
         return s3_url
 

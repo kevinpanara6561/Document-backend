@@ -1,5 +1,7 @@
+import io
 from typing import List, Optional
 
+from PyPDF2 import PdfWriter
 from fastapi import UploadFile
 from app.libs.s3_service import upload_file_to_s3
 from app.libs.utils import generate_id, generate_presigned_url
@@ -10,18 +12,20 @@ from dotenv import load_dotenv
 
 from app.routers.admin import schemas
 from app.routers.admin.schemas import InvoiceResponse
+from werkzeug.security import generate_password_hash, check_password_hash
 
 load_dotenv()
 
 bucket_name = os.getenv("AWS_BUCKET")
 
-def create_invoice(db: Session, file_path: str, file_name: str, file_type: str, admin_user_id: str):
+def create_invoice(db: Session, file_path: str, file_name: str, file_type: str, admin_user_id: str, password: str):
     invoice = InvoiceModel(
         id=generate_id(),
         name=file_name,
         file_path=file_path,
         file_type=file_type,
         admin_user_id=admin_user_id,
+        password=password
     )
     
     db.add(invoice)
@@ -30,23 +34,51 @@ def create_invoice(db: Session, file_path: str, file_name: str, file_type: str, 
     
     return invoice
 
-def upload_invoices(db: Session, files: List[UploadFile], admin_user_id: str):
+def upload_invoices(db: Session, files: List[UploadFile], admin_user_id: str, password: Optional[str] = None):
     invoices = []
     for file in files:
-        # Extract file name
         file_name = file.filename
-        
-        # Define S3 path for each file
         s3_path = f"invoices/{file_name}"
         
-        # Upload file directly to S3
-        s3_url = upload_file_to_s3(file, bucket_name, object_name=s3_path)
+        # Read file content
+        file_content = file.file.read()  # Read file synchronously
         
-        # Store file info in DB with name
-        invoice = create_invoice(db, file_path=s3_url, file_name=file_name, file_type=file.content_type, admin_user_id=admin_user_id)
+        if password and file.content_type == 'application/pdf':
+            # Apply password protection to the PDF
+            pdf_data = password_protect_pdf(file_content, password)
+            s3_url = upload_file_to_s3(pdf_data, bucket_name, object_name=s3_path)
+        else:
+            # Directly upload the file content if no password
+            s3_url = upload_file_to_s3(file_content, bucket_name, object_name=s3_path)
+        
+        password_hash = generate_password_hash(password) if password else None
+        
+        # Create and store the invoice in the database
+        invoice = create_invoice(
+            db, 
+            file_path=s3_url, 
+            file_name=file_name, 
+            file_type=file.content_type, 
+            admin_user_id=admin_user_id, 
+            password=password_hash
+        )
         invoices.append(invoice)
     
     return invoices
+
+
+def password_protect_pdf(file_content: bytes, password: str) -> bytes:
+    pdf_writer = PdfWriter()
+    
+    # Use the bytes content directly
+    pdf_reader = io.BytesIO(file_content)
+    
+    pdf_writer.append(pdf_reader)
+    pdf_writer.encrypt(user_pwd=password, owner_pwd=password, use_128bit=True)
+    
+    output = io.BytesIO()
+    pdf_writer.write(output)    
+    return output.getvalue()
 
 def get_invoices(
     db: Session,

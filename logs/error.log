@@ -1,135 +1,1707 @@
-[2024-08-23 07:17:29 +0000] [60725] [INFO] Handling signal: term
-[2024-08-23 07:17:29 +0000] [60728] [INFO] Shutting down
-[2024-08-23 07:17:29 +0000] [60728] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:17:29 +0000] [60727] [INFO] Shutting down
-[2024-08-23 07:17:29 +0000] [60727] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:17:29 +0000] [60729] [INFO] Shutting down
-[2024-08-23 07:17:29 +0000] [60729] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:17:29 +0000] [60726] [INFO] Shutting down
-[2024-08-23 07:17:29 +0000] [60726] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:17:29 +0000] [60728] [INFO] Waiting for application shutdown.
-[2024-08-23 07:17:29 +0000] [60728] [INFO] Application shutdown complete.
-[2024-08-23 07:17:29 +0000] [60728] [INFO] Finished server process [60728]
-[2024-08-23 07:17:29 +0000] [60725] [ERROR] Worker (pid:60728) was sent SIGTERM!
-[2024-08-23 07:17:29 +0000] [60727] [INFO] Waiting for application shutdown.
-[2024-08-23 07:17:29 +0000] [60727] [INFO] Application shutdown complete.
-[2024-08-23 07:17:29 +0000] [60727] [INFO] Finished server process [60727]
-[2024-08-23 07:17:29 +0000] [60729] [INFO] Waiting for application shutdown.
-[2024-08-23 07:17:29 +0000] [60729] [INFO] Application shutdown complete.
-[2024-08-23 07:17:29 +0000] [60729] [INFO] Finished server process [60729]
-[2024-08-23 07:17:29 +0000] [60725] [ERROR] Worker (pid:60727) was sent SIGTERM!
-[2024-08-23 07:17:29 +0000] [60725] [ERROR] Worker (pid:60729) was sent SIGTERM!
-[2024-08-23 07:17:29 +0000] [60726] [INFO] Waiting for application shutdown.
-[2024-08-23 07:17:29 +0000] [60726] [INFO] Application shutdown complete.
-[2024-08-23 07:17:29 +0000] [60726] [INFO] Finished server process [60726]
-[2024-08-23 07:17:29 +0000] [60725] [ERROR] Worker (pid:60726) was sent SIGTERM!
-[2024-08-23 07:17:29 +0000] [60725] [INFO] Shutting down: Master
-[2024-08-23 07:17:29 +0000] [60891] [INFO] Starting gunicorn 23.0.0
-[2024-08-23 07:17:29 +0000] [60891] [INFO] Listening at: http://0.0.0.0:8000 (60891)
-[2024-08-23 07:17:29 +0000] [60891] [INFO] Using worker: uvicorn.workers.UvicornWorker
-[2024-08-23 07:17:29 +0000] [60893] [INFO] Booting worker with pid: 60893
-[2024-08-23 07:17:29 +0000] [60894] [INFO] Booting worker with pid: 60894
-[2024-08-23 07:17:29 +0000] [60895] [INFO] Booting worker with pid: 60895
-[2024-08-23 07:17:29 +0000] [60896] [INFO] Booting worker with pid: 60896
-[2024-08-23 07:17:30 +0000] [60893] [INFO] Started server process [60893]
-[2024-08-23 07:17:30 +0000] [60893] [INFO] Waiting for application startup.
-[2024-08-23 07:17:30 +0000] [60893] [INFO] Application startup complete.
-[2024-08-23 07:17:30 +0000] [60894] [INFO] Started server process [60894]
-[2024-08-23 07:17:30 +0000] [60894] [INFO] Waiting for application startup.
-[2024-08-23 07:17:30 +0000] [60894] [INFO] Application startup complete.
-[2024-08-23 07:17:30 +0000] [60895] [INFO] Started server process [60895]
-[2024-08-23 07:17:30 +0000] [60895] [INFO] Waiting for application startup.
-[2024-08-23 07:17:30 +0000] [60895] [INFO] Application startup complete.
-[2024-08-23 07:17:30 +0000] [60896] [INFO] Started server process [60896]
-[2024-08-23 07:17:30 +0000] [60896] [INFO] Waiting for application startup.
-[2024-08-23 07:17:30 +0000] [60896] [INFO] Application startup complete.
-[2024-08-23 07:20:19 +0000] [60891] [INFO] Handling signal: term
-[2024-08-23 07:20:19 +0000] [60895] [INFO] Shutting down
-[2024-08-23 07:20:19 +0000] [60895] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:20:19 +0000] [60893] [INFO] Shutting down
-[2024-08-23 07:20:19 +0000] [60893] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:20:19 +0000] [60894] [INFO] Shutting down
-[2024-08-23 07:20:19 +0000] [60894] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:20:19 +0000] [60896] [INFO] Shutting down
-[2024-08-23 07:20:19 +0000] [60896] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:20:19 +0000] [60895] [INFO] Waiting for application shutdown.
-[2024-08-23 07:20:19 +0000] [60895] [INFO] Application shutdown complete.
-[2024-08-23 07:20:19 +0000] [60895] [INFO] Finished server process [60895]
-[2024-08-23 07:20:19 +0000] [60893] [INFO] Waiting for application shutdown.
-[2024-08-23 07:20:19 +0000] [60893] [INFO] Application shutdown complete.
-[2024-08-23 07:20:19 +0000] [60893] [INFO] Finished server process [60893]
-[2024-08-23 07:20:19 +0000] [60891] [ERROR] Worker (pid:60895) was sent SIGTERM!
-[2024-08-23 07:20:19 +0000] [60891] [ERROR] Worker (pid:60893) was sent SIGTERM!
-[2024-08-23 07:20:19 +0000] [60894] [INFO] Waiting for application shutdown.
-[2024-08-23 07:20:19 +0000] [60894] [INFO] Application shutdown complete.
-[2024-08-23 07:20:19 +0000] [60894] [INFO] Finished server process [60894]
-[2024-08-23 07:20:19 +0000] [60891] [ERROR] Worker (pid:60894) was sent SIGTERM!
-[2024-08-23 07:20:19 +0000] [60896] [INFO] Waiting for application shutdown.
-[2024-08-23 07:20:19 +0000] [60896] [INFO] Application shutdown complete.
-[2024-08-23 07:20:19 +0000] [60896] [INFO] Finished server process [60896]
-[2024-08-23 07:20:19 +0000] [60891] [ERROR] Worker (pid:60896) was sent SIGTERM!
-[2024-08-23 07:20:19 +0000] [60891] [INFO] Shutting down: Master
-[2024-08-23 07:20:20 +0000] [61791] [INFO] Starting gunicorn 23.0.0
-[2024-08-23 07:20:20 +0000] [61791] [INFO] Listening at: http://0.0.0.0:8000 (61791)
-[2024-08-23 07:20:20 +0000] [61791] [INFO] Using worker: uvicorn.workers.UvicornWorker
-[2024-08-23 07:20:20 +0000] [61793] [INFO] Booting worker with pid: 61793
-[2024-08-23 07:20:20 +0000] [61794] [INFO] Booting worker with pid: 61794
-[2024-08-23 07:20:20 +0000] [61795] [INFO] Booting worker with pid: 61795
-[2024-08-23 07:20:20 +0000] [61796] [INFO] Booting worker with pid: 61796
-[2024-08-23 07:20:21 +0000] [61793] [INFO] Started server process [61793]
-[2024-08-23 07:20:21 +0000] [61793] [INFO] Waiting for application startup.
-[2024-08-23 07:20:21 +0000] [61793] [INFO] Application startup complete.
-[2024-08-23 07:20:21 +0000] [61794] [INFO] Started server process [61794]
-[2024-08-23 07:20:21 +0000] [61794] [INFO] Waiting for application startup.
-[2024-08-23 07:20:21 +0000] [61794] [INFO] Application startup complete.
-[2024-08-23 07:20:21 +0000] [61795] [INFO] Started server process [61795]
-[2024-08-23 07:20:21 +0000] [61795] [INFO] Waiting for application startup.
-[2024-08-23 07:20:21 +0000] [61795] [INFO] Application startup complete.
-[2024-08-23 07:20:21 +0000] [61796] [INFO] Started server process [61796]
-[2024-08-23 07:20:21 +0000] [61796] [INFO] Waiting for application startup.
-[2024-08-23 07:20:21 +0000] [61796] [INFO] Application startup complete.
-[2024-08-23 07:21:51 +0000] [61791] [INFO] Handling signal: term
-[2024-08-23 07:21:51 +0000] [61793] [INFO] Shutting down
-[2024-08-23 07:21:51 +0000] [61793] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:21:51 +0000] [61795] [INFO] Shutting down
-[2024-08-23 07:21:51 +0000] [61795] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:21:51 +0000] [61794] [INFO] Shutting down
-[2024-08-23 07:21:51 +0000] [61794] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:21:51 +0000] [61796] [INFO] Shutting down
-[2024-08-23 07:21:51 +0000] [61796] [INFO] Error while closing socket [Errno 9] Bad file descriptor
-[2024-08-23 07:21:51 +0000] [61793] [INFO] Waiting for application shutdown.
-[2024-08-23 07:21:51 +0000] [61793] [INFO] Application shutdown complete.
-[2024-08-23 07:21:51 +0000] [61793] [INFO] Finished server process [61793]
-[2024-08-23 07:21:51 +0000] [61791] [ERROR] Worker (pid:61793) was sent SIGTERM!
-[2024-08-23 07:21:51 +0000] [61795] [INFO] Waiting for application shutdown.
-[2024-08-23 07:21:51 +0000] [61795] [INFO] Application shutdown complete.
-[2024-08-23 07:21:51 +0000] [61795] [INFO] Finished server process [61795]
-[2024-08-23 07:21:51 +0000] [61791] [ERROR] Worker (pid:61795) was sent SIGTERM!
-[2024-08-23 07:21:51 +0000] [61794] [INFO] Waiting for application shutdown.
-[2024-08-23 07:21:51 +0000] [61794] [INFO] Application shutdown complete.
-[2024-08-23 07:21:51 +0000] [61794] [INFO] Finished server process [61794]
-[2024-08-23 07:21:51 +0000] [61791] [ERROR] Worker (pid:61794) was sent SIGTERM!
-[2024-08-23 07:21:51 +0000] [61796] [INFO] Waiting for application shutdown.
-[2024-08-23 07:21:51 +0000] [61796] [INFO] Application shutdown complete.
-[2024-08-23 07:21:51 +0000] [61796] [INFO] Finished server process [61796]
-[2024-08-23 07:21:51 +0000] [61791] [ERROR] Worker (pid:61796) was sent SIGTERM!
-[2024-08-23 07:21:51 +0000] [61791] [INFO] Shutting down: Master
-[2024-08-23 07:21:51 +0000] [61942] [INFO] Starting gunicorn 23.0.0
-[2024-08-23 07:21:51 +0000] [61942] [INFO] Listening at: http://0.0.0.0:8000 (61942)
-[2024-08-23 07:21:51 +0000] [61942] [INFO] Using worker: uvicorn.workers.UvicornWorker
-[2024-08-23 07:21:51 +0000] [61945] [INFO] Booting worker with pid: 61945
-[2024-08-23 07:21:51 +0000] [61946] [INFO] Booting worker with pid: 61946
-[2024-08-23 07:21:51 +0000] [61947] [INFO] Booting worker with pid: 61947
-[2024-08-23 07:21:51 +0000] [61948] [INFO] Booting worker with pid: 61948
-[2024-08-23 07:21:53 +0000] [61945] [INFO] Started server process [61945]
-[2024-08-23 07:21:53 +0000] [61945] [INFO] Waiting for application startup.
-[2024-08-23 07:21:53 +0000] [61945] [INFO] Application startup complete.
-[2024-08-23 07:21:53 +0000] [61946] [INFO] Started server process [61946]
-[2024-08-23 07:21:53 +0000] [61946] [INFO] Waiting for application startup.
-[2024-08-23 07:21:53 +0000] [61946] [INFO] Application startup complete.
-[2024-08-23 07:21:53 +0000] [61947] [INFO] Started server process [61947]
-[2024-08-23 07:21:53 +0000] [61947] [INFO] Waiting for application startup.
-[2024-08-23 07:21:53 +0000] [61947] [INFO] Application startup complete.
-[2024-08-23 07:21:53 +0000] [61948] [INFO] Started server process [61948]
-[2024-08-23 07:21:53 +0000] [61948] [INFO] Waiting for application startup.
-[2024-08-23 07:21:53 +0000] [61948] [INFO] Application startup complete.
+[2024-08-27 04:26:25 +0000] [6347] [INFO] Handling signal: term
+[2024-08-27 04:26:25 +0000] [6353] [INFO] Shutting down
+[2024-08-27 04:26:25 +0000] [6353] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:26:25 +0000] [6354] [INFO] Shutting down
+[2024-08-27 04:26:25 +0000] [6354] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:26:25 +0000] [6351] [INFO] Shutting down
+[2024-08-27 04:26:25 +0000] [6351] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:26:25 +0000] [6352] [INFO] Shutting down
+[2024-08-27 04:26:25 +0000] [6352] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:26:25 +0000] [6353] [INFO] Waiting for application shutdown.
+[2024-08-27 04:26:25 +0000] [6353] [INFO] Application shutdown complete.
+[2024-08-27 04:26:25 +0000] [6353] [INFO] Finished server process [6353]
+[2024-08-27 04:26:25 +0000] [6347] [ERROR] Worker (pid:6353) was sent SIGTERM!
+[2024-08-27 04:26:25 +0000] [6354] [INFO] Waiting for application shutdown.
+[2024-08-27 04:26:25 +0000] [6354] [INFO] Application shutdown complete.
+[2024-08-27 04:26:25 +0000] [6354] [INFO] Finished server process [6354]
+[2024-08-27 04:26:25 +0000] [6347] [ERROR] Worker (pid:6354) was sent SIGTERM!
+[2024-08-27 04:26:25 +0000] [6351] [INFO] Waiting for application shutdown.
+[2024-08-27 04:26:25 +0000] [6351] [INFO] Application shutdown complete.
+[2024-08-27 04:26:25 +0000] [6351] [INFO] Finished server process [6351]
+[2024-08-27 04:26:25 +0000] [6347] [ERROR] Worker (pid:6351) was sent SIGTERM!
+[2024-08-27 04:26:25 +0000] [6352] [INFO] Waiting for application shutdown.
+[2024-08-27 04:26:25 +0000] [6352] [INFO] Application shutdown complete.
+[2024-08-27 04:26:25 +0000] [6352] [INFO] Finished server process [6352]
+[2024-08-27 04:26:25 +0000] [6347] [ERROR] Worker (pid:6352) was sent SIGTERM!
+[2024-08-27 04:26:25 +0000] [6347] [INFO] Shutting down: Master
+[2024-08-27 04:26:26 +0000] [6942] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:26:26 +0000] [6942] [INFO] Listening at: http://0.0.0.0:8000 (6942)
+[2024-08-27 04:26:26 +0000] [6942] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:26:26 +0000] [6945] [INFO] Booting worker with pid: 6945
+[2024-08-27 04:26:26 +0000] [6946] [INFO] Booting worker with pid: 6946
+[2024-08-27 04:26:26 +0000] [6947] [INFO] Booting worker with pid: 6947
+[2024-08-27 04:26:26 +0000] [6948] [INFO] Booting worker with pid: 6948
+[2024-08-27 04:26:27 +0000] [6945] [INFO] Started server process [6945]
+[2024-08-27 04:26:27 +0000] [6945] [INFO] Waiting for application startup.
+[2024-08-27 04:26:27 +0000] [6945] [INFO] Application startup complete.
+[2024-08-27 04:26:27 +0000] [6946] [INFO] Started server process [6946]
+[2024-08-27 04:26:27 +0000] [6946] [INFO] Waiting for application startup.
+[2024-08-27 04:26:27 +0000] [6947] [INFO] Started server process [6947]
+[2024-08-27 04:26:27 +0000] [6947] [INFO] Waiting for application startup.
+[2024-08-27 04:26:27 +0000] [6946] [INFO] Application startup complete.
+[2024-08-27 04:26:27 +0000] [6947] [INFO] Application startup complete.
+[2024-08-27 04:26:27 +0000] [6948] [INFO] Started server process [6948]
+[2024-08-27 04:26:27 +0000] [6948] [INFO] Waiting for application startup.
+[2024-08-27 04:26:27 +0000] [6948] [INFO] Application startup complete.
+[2024-08-27 04:32:52 +0000] [6942] [INFO] Handling signal: term
+[2024-08-27 04:32:52 +0000] [6946] [INFO] Shutting down
+[2024-08-27 04:32:52 +0000] [6946] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:32:52 +0000] [6948] [INFO] Shutting down
+[2024-08-27 04:32:52 +0000] [6948] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:32:52 +0000] [6945] [INFO] Shutting down
+[2024-08-27 04:32:52 +0000] [6945] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:32:52 +0000] [6947] [INFO] Shutting down
+[2024-08-27 04:32:52 +0000] [6947] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:32:52 +0000] [6946] [INFO] Waiting for application shutdown.
+[2024-08-27 04:32:52 +0000] [6946] [INFO] Application shutdown complete.
+[2024-08-27 04:32:52 +0000] [6946] [INFO] Finished server process [6946]
+[2024-08-27 04:32:52 +0000] [6948] [INFO] Waiting for application shutdown.
+[2024-08-27 04:32:52 +0000] [6948] [INFO] Application shutdown complete.
+[2024-08-27 04:32:52 +0000] [6948] [INFO] Finished server process [6948]
+[2024-08-27 04:32:52 +0000] [6942] [ERROR] Worker (pid:6946) was sent SIGTERM!
+[2024-08-27 04:32:52 +0000] [6942] [ERROR] Worker (pid:6948) was sent SIGTERM!
+[2024-08-27 04:32:52 +0000] [6945] [INFO] Waiting for application shutdown.
+[2024-08-27 04:32:52 +0000] [6945] [INFO] Application shutdown complete.
+[2024-08-27 04:32:52 +0000] [6945] [INFO] Finished server process [6945]
+[2024-08-27 04:32:52 +0000] [6947] [INFO] Waiting for application shutdown.
+[2024-08-27 04:32:52 +0000] [6947] [INFO] Application shutdown complete.
+[2024-08-27 04:32:52 +0000] [6947] [INFO] Finished server process [6947]
+[2024-08-27 04:32:52 +0000] [6942] [ERROR] Worker (pid:6945) was sent SIGTERM!
+[2024-08-27 04:32:52 +0000] [6942] [ERROR] Worker (pid:6947) was sent SIGTERM!
+[2024-08-27 04:32:52 +0000] [6942] [INFO] Shutting down: Master
+[2024-08-27 04:32:52 +0000] [7769] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:32:52 +0000] [7769] [INFO] Listening at: http://0.0.0.0:8000 (7769)
+[2024-08-27 04:32:52 +0000] [7769] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:32:52 +0000] [7772] [INFO] Booting worker with pid: 7772
+[2024-08-27 04:32:52 +0000] [7773] [INFO] Booting worker with pid: 7773
+[2024-08-27 04:32:52 +0000] [7775] [INFO] Booting worker with pid: 7775
+[2024-08-27 04:32:52 +0000] [7776] [INFO] Booting worker with pid: 7776
+[2024-08-27 04:32:53 +0000] [7772] [INFO] Started server process [7772]
+[2024-08-27 04:32:53 +0000] [7772] [INFO] Waiting for application startup.
+[2024-08-27 04:32:53 +0000] [7772] [INFO] Application startup complete.
+[2024-08-27 04:32:53 +0000] [7773] [INFO] Started server process [7773]
+[2024-08-27 04:32:53 +0000] [7773] [INFO] Waiting for application startup.
+[2024-08-27 04:32:53 +0000] [7773] [INFO] Application startup complete.
+[2024-08-27 04:32:53 +0000] [7775] [INFO] Started server process [7775]
+[2024-08-27 04:32:53 +0000] [7775] [INFO] Waiting for application startup.
+[2024-08-27 04:32:53 +0000] [7775] [INFO] Application startup complete.
+[2024-08-27 04:32:54 +0000] [7776] [INFO] Started server process [7776]
+[2024-08-27 04:32:54 +0000] [7776] [INFO] Waiting for application startup.
+[2024-08-27 04:32:54 +0000] [7776] [INFO] Application startup complete.
+[2024-08-27 04:38:05 +0000] [7769] [INFO] Handling signal: term
+[2024-08-27 04:38:05 +0000] [7773] [INFO] Shutting down
+[2024-08-27 04:38:05 +0000] [7776] [INFO] Shutting down
+[2024-08-27 04:38:05 +0000] [7776] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:38:05 +0000] [7773] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:38:05 +0000] [7772] [INFO] Shutting down
+[2024-08-27 04:38:05 +0000] [7772] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:38:05 +0000] [7775] [INFO] Shutting down
+[2024-08-27 04:38:05 +0000] [7775] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:38:05 +0000] [7773] [INFO] Waiting for application shutdown.
+[2024-08-27 04:38:05 +0000] [7776] [INFO] Waiting for application shutdown.
+[2024-08-27 04:38:05 +0000] [7773] [INFO] Application shutdown complete.
+[2024-08-27 04:38:05 +0000] [7776] [INFO] Application shutdown complete.
+[2024-08-27 04:38:05 +0000] [7773] [INFO] Finished server process [7773]
+[2024-08-27 04:38:05 +0000] [7776] [INFO] Finished server process [7776]
+[2024-08-27 04:38:05 +0000] [7772] [INFO] Waiting for application shutdown.
+[2024-08-27 04:38:05 +0000] [7772] [INFO] Application shutdown complete.
+[2024-08-27 04:38:05 +0000] [7772] [INFO] Finished server process [7772]
+[2024-08-27 04:38:05 +0000] [7769] [ERROR] Worker (pid:7776) was sent SIGTERM!
+[2024-08-27 04:38:05 +0000] [7769] [ERROR] Worker (pid:7773) was sent SIGTERM!
+[2024-08-27 04:38:05 +0000] [7769] [ERROR] Worker (pid:7772) was sent SIGTERM!
+[2024-08-27 04:38:05 +0000] [7775] [INFO] Waiting for application shutdown.
+[2024-08-27 04:38:05 +0000] [7775] [INFO] Application shutdown complete.
+[2024-08-27 04:38:05 +0000] [7775] [INFO] Finished server process [7775]
+[2024-08-27 04:38:05 +0000] [7769] [ERROR] Worker (pid:7775) was sent SIGTERM!
+[2024-08-27 04:38:05 +0000] [7769] [INFO] Shutting down: Master
+[2024-08-27 04:38:06 +0000] [8776] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:38:06 +0000] [8776] [INFO] Listening at: http://0.0.0.0:8000 (8776)
+[2024-08-27 04:38:06 +0000] [8776] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:38:06 +0000] [8779] [INFO] Booting worker with pid: 8779
+[2024-08-27 04:38:06 +0000] [8780] [INFO] Booting worker with pid: 8780
+[2024-08-27 04:38:06 +0000] [8781] [INFO] Booting worker with pid: 8781
+[2024-08-27 04:38:06 +0000] [8782] [INFO] Booting worker with pid: 8782
+[2024-08-27 04:38:07 +0000] [8779] [INFO] Started server process [8779]
+[2024-08-27 04:38:07 +0000] [8779] [INFO] Waiting for application startup.
+[2024-08-27 04:38:07 +0000] [8779] [INFO] Application startup complete.
+[2024-08-27 04:38:07 +0000] [8780] [INFO] Started server process [8780]
+[2024-08-27 04:38:07 +0000] [8780] [INFO] Waiting for application startup.
+[2024-08-27 04:38:07 +0000] [8780] [INFO] Application startup complete.
+[2024-08-27 04:38:07 +0000] [8781] [INFO] Started server process [8781]
+[2024-08-27 04:38:07 +0000] [8781] [INFO] Waiting for application startup.
+[2024-08-27 04:38:07 +0000] [8781] [INFO] Application startup complete.
+[2024-08-27 04:38:07 +0000] [8782] [INFO] Started server process [8782]
+[2024-08-27 04:38:07 +0000] [8782] [INFO] Waiting for application startup.
+[2024-08-27 04:38:07 +0000] [8782] [INFO] Application startup complete.
+[2024-08-27 04:41:23 +0000] [8776] [INFO] Handling signal: term
+[2024-08-27 04:41:23 +0000] [8780] [INFO] Shutting down
+[2024-08-27 04:41:23 +0000] [8780] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:41:23 +0000] [8781] [INFO] Shutting down
+[2024-08-27 04:41:23 +0000] [8781] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:41:23 +0000] [8782] [INFO] Shutting down
+[2024-08-27 04:41:23 +0000] [8782] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:41:23 +0000] [8779] [INFO] Shutting down
+[2024-08-27 04:41:23 +0000] [8779] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:41:23 +0000] [8780] [INFO] Waiting for application shutdown.
+[2024-08-27 04:41:23 +0000] [8780] [INFO] Application shutdown complete.
+[2024-08-27 04:41:23 +0000] [8780] [INFO] Finished server process [8780]
+[2024-08-27 04:41:23 +0000] [8776] [ERROR] Worker (pid:8780) was sent SIGTERM!
+[2024-08-27 04:41:23 +0000] [8781] [INFO] Waiting for application shutdown.
+[2024-08-27 04:41:23 +0000] [8781] [INFO] Application shutdown complete.
+[2024-08-27 04:41:23 +0000] [8781] [INFO] Finished server process [8781]
+[2024-08-27 04:41:23 +0000] [8776] [ERROR] Worker (pid:8781) was sent SIGTERM!
+[2024-08-27 04:41:23 +0000] [8782] [INFO] Waiting for application shutdown.
+[2024-08-27 04:41:23 +0000] [8782] [INFO] Application shutdown complete.
+[2024-08-27 04:41:23 +0000] [8782] [INFO] Finished server process [8782]
+[2024-08-27 04:41:23 +0000] [8779] [INFO] Waiting for application shutdown.
+[2024-08-27 04:41:23 +0000] [8779] [INFO] Application shutdown complete.
+[2024-08-27 04:41:23 +0000] [8779] [INFO] Finished server process [8779]
+[2024-08-27 04:41:23 +0000] [8776] [ERROR] Worker (pid:8782) was sent SIGTERM!
+[2024-08-27 04:41:23 +0000] [8776] [ERROR] Worker (pid:8779) was sent SIGTERM!
+[2024-08-27 04:41:23 +0000] [8776] [INFO] Shutting down: Master
+[2024-08-27 04:41:23 +0000] [9541] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:41:23 +0000] [9541] [INFO] Listening at: http://0.0.0.0:8000 (9541)
+[2024-08-27 04:41:23 +0000] [9541] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:41:23 +0000] [9543] [INFO] Booting worker with pid: 9543
+[2024-08-27 04:41:23 +0000] [9544] [INFO] Booting worker with pid: 9544
+[2024-08-27 04:41:23 +0000] [9545] [INFO] Booting worker with pid: 9545
+[2024-08-27 04:41:23 +0000] [9546] [INFO] Booting worker with pid: 9546
+[2024-08-27 04:41:24 +0000] [9543] [INFO] Started server process [9543]
+[2024-08-27 04:41:24 +0000] [9543] [INFO] Waiting for application startup.
+[2024-08-27 04:41:24 +0000] [9543] [INFO] Application startup complete.
+[2024-08-27 04:41:24 +0000] [9544] [INFO] Started server process [9544]
+[2024-08-27 04:41:24 +0000] [9544] [INFO] Waiting for application startup.
+[2024-08-27 04:41:24 +0000] [9544] [INFO] Application startup complete.
+[2024-08-27 04:41:24 +0000] [9545] [INFO] Started server process [9545]
+[2024-08-27 04:41:24 +0000] [9545] [INFO] Waiting for application startup.
+[2024-08-27 04:41:24 +0000] [9545] [INFO] Application startup complete.
+[2024-08-27 04:41:25 +0000] [9546] [INFO] Started server process [9546]
+[2024-08-27 04:41:25 +0000] [9546] [INFO] Waiting for application startup.
+[2024-08-27 04:41:25 +0000] [9546] [INFO] Application startup complete.
+[2024-08-27 04:43:51 +0000] [9541] [INFO] Handling signal: term
+[2024-08-27 04:43:52 +0000] [9545] [INFO] Shutting down
+[2024-08-27 04:43:52 +0000] [9545] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:43:52 +0000] [9546] [INFO] Shutting down
+[2024-08-27 04:43:52 +0000] [9546] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:43:52 +0000] [9543] [INFO] Shutting down
+[2024-08-27 04:43:52 +0000] [9543] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:43:52 +0000] [9544] [INFO] Shutting down
+[2024-08-27 04:43:52 +0000] [9544] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:43:52 +0000] [9545] [INFO] Waiting for application shutdown.
+[2024-08-27 04:43:52 +0000] [9545] [INFO] Application shutdown complete.
+[2024-08-27 04:43:52 +0000] [9545] [INFO] Finished server process [9545]
+[2024-08-27 04:43:52 +0000] [9541] [ERROR] Worker (pid:9545) was sent SIGTERM!
+[2024-08-27 04:43:52 +0000] [9546] [INFO] Waiting for application shutdown.
+[2024-08-27 04:43:52 +0000] [9546] [INFO] Application shutdown complete.
+[2024-08-27 04:43:52 +0000] [9546] [INFO] Finished server process [9546]
+[2024-08-27 04:43:52 +0000] [9541] [ERROR] Worker (pid:9546) was sent SIGTERM!
+[2024-08-27 04:43:52 +0000] [9543] [INFO] Waiting for application shutdown.
+[2024-08-27 04:43:52 +0000] [9543] [INFO] Application shutdown complete.
+[2024-08-27 04:43:52 +0000] [9543] [INFO] Finished server process [9543]
+[2024-08-27 04:43:52 +0000] [9541] [ERROR] Worker (pid:9543) was sent SIGTERM!
+[2024-08-27 04:43:52 +0000] [9544] [INFO] Waiting for application shutdown.
+[2024-08-27 04:43:52 +0000] [9544] [INFO] Application shutdown complete.
+[2024-08-27 04:43:52 +0000] [9544] [INFO] Finished server process [9544]
+[2024-08-27 04:43:52 +0000] [9541] [ERROR] Worker (pid:9544) was sent SIGTERM!
+[2024-08-27 04:43:52 +0000] [9541] [INFO] Shutting down: Master
+[2024-08-27 04:43:52 +0000] [10385] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:43:52 +0000] [10385] [INFO] Listening at: http://0.0.0.0:8000 (10385)
+[2024-08-27 04:43:52 +0000] [10385] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:43:52 +0000] [10388] [INFO] Booting worker with pid: 10388
+[2024-08-27 04:43:52 +0000] [10389] [INFO] Booting worker with pid: 10389
+[2024-08-27 04:43:52 +0000] [10390] [INFO] Booting worker with pid: 10390
+[2024-08-27 04:43:52 +0000] [10391] [INFO] Booting worker with pid: 10391
+[2024-08-27 04:43:53 +0000] [10388] [INFO] Started server process [10388]
+[2024-08-27 04:43:53 +0000] [10388] [INFO] Waiting for application startup.
+[2024-08-27 04:43:53 +0000] [10388] [INFO] Application startup complete.
+[2024-08-27 04:43:53 +0000] [10389] [INFO] Started server process [10389]
+[2024-08-27 04:43:53 +0000] [10389] [INFO] Waiting for application startup.
+[2024-08-27 04:43:53 +0000] [10389] [INFO] Application startup complete.
+[2024-08-27 04:43:53 +0000] [10390] [INFO] Started server process [10390]
+[2024-08-27 04:43:53 +0000] [10390] [INFO] Waiting for application startup.
+[2024-08-27 04:43:53 +0000] [10390] [INFO] Application startup complete.
+[2024-08-27 04:43:53 +0000] [10391] [INFO] Started server process [10391]
+[2024-08-27 04:43:53 +0000] [10391] [INFO] Waiting for application startup.
+[2024-08-27 04:43:53 +0000] [10391] [INFO] Application startup complete.
+[2024-08-27 04:44:49 +0000] [10385] [INFO] Handling signal: term
+[2024-08-27 04:44:49 +0000] [10388] [INFO] Shutting down
+[2024-08-27 04:44:49 +0000] [10388] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:44:49 +0000] [10389] [INFO] Shutting down
+[2024-08-27 04:44:49 +0000] [10389] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:44:49 +0000] [10391] [INFO] Shutting down
+[2024-08-27 04:44:49 +0000] [10391] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:44:49 +0000] [10390] [INFO] Shutting down
+[2024-08-27 04:44:49 +0000] [10390] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:44:49 +0000] [10388] [INFO] Waiting for application shutdown.
+[2024-08-27 04:44:49 +0000] [10388] [INFO] Application shutdown complete.
+[2024-08-27 04:44:49 +0000] [10388] [INFO] Finished server process [10388]
+[2024-08-27 04:44:49 +0000] [10385] [ERROR] Worker (pid:10388) was sent SIGTERM!
+[2024-08-27 04:44:49 +0000] [10389] [INFO] Waiting for application shutdown.
+[2024-08-27 04:44:49 +0000] [10389] [INFO] Application shutdown complete.
+[2024-08-27 04:44:49 +0000] [10389] [INFO] Finished server process [10389]
+[2024-08-27 04:44:49 +0000] [10391] [INFO] Waiting for application shutdown.
+[2024-08-27 04:44:49 +0000] [10391] [INFO] Application shutdown complete.
+[2024-08-27 04:44:49 +0000] [10391] [INFO] Finished server process [10391]
+[2024-08-27 04:44:49 +0000] [10385] [ERROR] Worker (pid:10389) was sent SIGTERM!
+[2024-08-27 04:44:49 +0000] [10385] [ERROR] Worker (pid:10391) was sent SIGTERM!
+[2024-08-27 04:44:49 +0000] [10390] [INFO] Waiting for application shutdown.
+[2024-08-27 04:44:49 +0000] [10390] [INFO] Application shutdown complete.
+[2024-08-27 04:44:49 +0000] [10390] [INFO] Finished server process [10390]
+[2024-08-27 04:44:49 +0000] [10385] [ERROR] Worker (pid:10390) was sent SIGTERM!
+[2024-08-27 04:44:49 +0000] [10385] [INFO] Shutting down: Master
+[2024-08-27 04:44:49 +0000] [10767] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:44:49 +0000] [10767] [INFO] Listening at: http://0.0.0.0:8000 (10767)
+[2024-08-27 04:44:49 +0000] [10767] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:44:49 +0000] [10790] [INFO] Booting worker with pid: 10790
+[2024-08-27 04:44:49 +0000] [10791] [INFO] Booting worker with pid: 10791
+[2024-08-27 04:44:50 +0000] [10792] [INFO] Booting worker with pid: 10792
+[2024-08-27 04:44:50 +0000] [10793] [INFO] Booting worker with pid: 10793
+[2024-08-27 04:44:51 +0000] [10790] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:51 +0000] [10790] [INFO] Worker exiting (pid: 10790)
+[2024-08-27 04:44:51 +0000] [10791] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:51 +0000] [10791] [INFO] Worker exiting (pid: 10791)
+[2024-08-27 04:44:51 +0000] [10792] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:51 +0000] [10792] [INFO] Worker exiting (pid: 10792)
+[2024-08-27 04:44:51 +0000] [10793] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:51 +0000] [10793] [INFO] Worker exiting (pid: 10793)
+[2024-08-27 04:44:51 +0000] [10767] [ERROR] Worker (pid:10790) exited with code 3
+[2024-08-27 04:44:51 +0000] [10767] [ERROR] Worker (pid:10791) was sent SIGTERM!
+[2024-08-27 04:44:51 +0000] [10767] [ERROR] Worker (pid:10793) was sent SIGTERM!
+[2024-08-27 04:44:51 +0000] [10767] [ERROR] Worker (pid:10792) was sent SIGTERM!
+[2024-08-27 04:44:51 +0000] [10767] [ERROR] Shutting down: Master
+[2024-08-27 04:44:51 +0000] [10767] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:44:54 +0000] [10836] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:44:54 +0000] [10836] [INFO] Listening at: http://0.0.0.0:8000 (10836)
+[2024-08-27 04:44:54 +0000] [10836] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:44:54 +0000] [10837] [INFO] Booting worker with pid: 10837
+[2024-08-27 04:44:54 +0000] [10838] [INFO] Booting worker with pid: 10838
+[2024-08-27 04:44:54 +0000] [10842] [INFO] Booting worker with pid: 10842
+[2024-08-27 04:44:54 +0000] [10843] [INFO] Booting worker with pid: 10843
+[2024-08-27 04:44:55 +0000] [10837] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:55 +0000] [10837] [INFO] Worker exiting (pid: 10837)
+[2024-08-27 04:44:55 +0000] [10838] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:55 +0000] [10838] [INFO] Worker exiting (pid: 10838)
+[2024-08-27 04:44:55 +0000] [10843] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:55 +0000] [10843] [INFO] Worker exiting (pid: 10843)
+[2024-08-27 04:44:55 +0000] [10842] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:44:55 +0000] [10842] [INFO] Worker exiting (pid: 10842)
+[2024-08-27 04:44:55 +0000] [10836] [ERROR] Worker (pid:10837) exited with code 3
+[2024-08-27 04:44:55 +0000] [10836] [ERROR] Worker (pid:10838) was sent SIGTERM!
+[2024-08-27 04:44:55 +0000] [10836] [ERROR] Worker (pid:10842) was sent SIGTERM!
+[2024-08-27 04:44:55 +0000] [10836] [ERROR] Worker (pid:10843) was sent SIGTERM!
+[2024-08-27 04:44:56 +0000] [10836] [ERROR] Shutting down: Master
+[2024-08-27 04:44:56 +0000] [10836] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:44:59 +0000] [10887] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:44:59 +0000] [10887] [INFO] Listening at: http://0.0.0.0:8000 (10887)
+[2024-08-27 04:44:59 +0000] [10887] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:44:59 +0000] [10888] [INFO] Booting worker with pid: 10888
+[2024-08-27 04:44:59 +0000] [10889] [INFO] Booting worker with pid: 10889
+[2024-08-27 04:44:59 +0000] [10890] [INFO] Booting worker with pid: 10890
+[2024-08-27 04:44:59 +0000] [10891] [INFO] Booting worker with pid: 10891
+[2024-08-27 04:45:00 +0000] [10888] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:00 +0000] [10888] [INFO] Worker exiting (pid: 10888)
+[2024-08-27 04:45:00 +0000] [10889] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:00 +0000] [10889] [INFO] Worker exiting (pid: 10889)
+[2024-08-27 04:45:00 +0000] [10890] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:00 +0000] [10890] [INFO] Worker exiting (pid: 10890)
+[2024-08-27 04:45:00 +0000] [10891] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:00 +0000] [10891] [INFO] Worker exiting (pid: 10891)
+[2024-08-27 04:45:00 +0000] [10887] [ERROR] Worker (pid:10888) exited with code 3
+[2024-08-27 04:45:00 +0000] [10887] [ERROR] Worker (pid:10890) was sent SIGTERM!
+[2024-08-27 04:45:00 +0000] [10887] [ERROR] Worker (pid:10889) was sent SIGTERM!
+[2024-08-27 04:45:00 +0000] [10887] [ERROR] Worker (pid:10891) was sent SIGTERM!
+[2024-08-27 04:45:00 +0000] [10887] [ERROR] Shutting down: Master
+[2024-08-27 04:45:00 +0000] [10887] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:45:04 +0000] [10928] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:45:04 +0000] [10928] [INFO] Listening at: http://0.0.0.0:8000 (10928)
+[2024-08-27 04:45:04 +0000] [10928] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:45:04 +0000] [10929] [INFO] Booting worker with pid: 10929
+[2024-08-27 04:45:04 +0000] [10930] [INFO] Booting worker with pid: 10930
+[2024-08-27 04:45:04 +0000] [10931] [INFO] Booting worker with pid: 10931
+[2024-08-27 04:45:04 +0000] [10932] [INFO] Booting worker with pid: 10932
+[2024-08-27 04:45:05 +0000] [10929] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:05 +0000] [10929] [INFO] Worker exiting (pid: 10929)
+[2024-08-27 04:45:05 +0000] [10930] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:05 +0000] [10930] [INFO] Worker exiting (pid: 10930)
+[2024-08-27 04:45:05 +0000] [10932] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:05 +0000] [10931] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:05 +0000] [10932] [INFO] Worker exiting (pid: 10932)
+[2024-08-27 04:45:05 +0000] [10931] [INFO] Worker exiting (pid: 10931)
+[2024-08-27 04:45:05 +0000] [10928] [ERROR] Worker (pid:10929) exited with code 3
+[2024-08-27 04:45:05 +0000] [10928] [ERROR] Worker (pid:10930) was sent SIGTERM!
+[2024-08-27 04:45:05 +0000] [10928] [ERROR] Worker (pid:10932) was sent SIGTERM!
+[2024-08-27 04:45:05 +0000] [10928] [ERROR] Worker (pid:10931) was sent SIGTERM!
+[2024-08-27 04:45:05 +0000] [10928] [ERROR] Shutting down: Master
+[2024-08-27 04:45:05 +0000] [10928] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:45:08 +0000] [10944] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:45:08 +0000] [10944] [INFO] Listening at: http://0.0.0.0:8000 (10944)
+[2024-08-27 04:45:08 +0000] [10944] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:45:08 +0000] [10954] [INFO] Booting worker with pid: 10954
+[2024-08-27 04:45:08 +0000] [10956] [INFO] Booting worker with pid: 10956
+[2024-08-27 04:45:08 +0000] [10957] [INFO] Booting worker with pid: 10957
+[2024-08-27 04:45:09 +0000] [10958] [INFO] Booting worker with pid: 10958
+[2024-08-27 04:45:09 +0000] [10954] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:09 +0000] [10954] [INFO] Worker exiting (pid: 10954)
+[2024-08-27 04:45:10 +0000] [10956] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:10 +0000] [10956] [INFO] Worker exiting (pid: 10956)
+[2024-08-27 04:45:10 +0000] [10957] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:10 +0000] [10957] [INFO] Worker exiting (pid: 10957)
+[2024-08-27 04:45:10 +0000] [10958] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:10 +0000] [10958] [INFO] Worker exiting (pid: 10958)
+[2024-08-27 04:45:10 +0000] [10944] [ERROR] Worker (pid:10954) exited with code 3
+[2024-08-27 04:45:10 +0000] [10944] [ERROR] Worker (pid:10956) was sent SIGTERM!
+[2024-08-27 04:45:10 +0000] [10944] [ERROR] Worker (pid:10958) was sent SIGTERM!
+[2024-08-27 04:45:10 +0000] [10944] [ERROR] Worker (pid:10957) was sent SIGTERM!
+[2024-08-27 04:45:10 +0000] [10944] [ERROR] Shutting down: Master
+[2024-08-27 04:45:10 +0000] [10944] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:45:13 +0000] [10969] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:45:13 +0000] [10969] [INFO] Listening at: http://0.0.0.0:8000 (10969)
+[2024-08-27 04:45:13 +0000] [10969] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:45:13 +0000] [10970] [INFO] Booting worker with pid: 10970
+[2024-08-27 04:45:13 +0000] [10971] [INFO] Booting worker with pid: 10971
+[2024-08-27 04:45:13 +0000] [10972] [INFO] Booting worker with pid: 10972
+[2024-08-27 04:45:13 +0000] [10975] [INFO] Booting worker with pid: 10975
+[2024-08-27 04:45:14 +0000] [10970] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:14 +0000] [10970] [INFO] Worker exiting (pid: 10970)
+[2024-08-27 04:45:14 +0000] [10971] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:14 +0000] [10971] [INFO] Worker exiting (pid: 10971)
+[2024-08-27 04:45:14 +0000] [10972] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:14 +0000] [10972] [INFO] Worker exiting (pid: 10972)
+[2024-08-27 04:45:14 +0000] [10975] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:14 +0000] [10975] [INFO] Worker exiting (pid: 10975)
+[2024-08-27 04:45:14 +0000] [10969] [ERROR] Worker (pid:10970) exited with code 3
+[2024-08-27 04:45:14 +0000] [10969] [ERROR] Worker (pid:10972) was sent SIGTERM!
+[2024-08-27 04:45:14 +0000] [10969] [ERROR] Worker (pid:10971) was sent SIGTERM!
+[2024-08-27 04:45:14 +0000] [10969] [ERROR] Worker (pid:10975) was sent SIGTERM!
+[2024-08-27 04:45:15 +0000] [10969] [ERROR] Shutting down: Master
+[2024-08-27 04:45:15 +0000] [10969] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:45:18 +0000] [10993] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:45:18 +0000] [10993] [INFO] Listening at: http://0.0.0.0:8000 (10993)
+[2024-08-27 04:45:18 +0000] [10993] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:45:18 +0000] [10994] [INFO] Booting worker with pid: 10994
+[2024-08-27 04:45:18 +0000] [10995] [INFO] Booting worker with pid: 10995
+[2024-08-27 04:45:18 +0000] [10996] [INFO] Booting worker with pid: 10996
+[2024-08-27 04:45:18 +0000] [10997] [INFO] Booting worker with pid: 10997
+[2024-08-27 04:45:19 +0000] [10994] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:19 +0000] [10994] [INFO] Worker exiting (pid: 10994)
+[2024-08-27 04:45:19 +0000] [10995] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:19 +0000] [10995] [INFO] Worker exiting (pid: 10995)
+[2024-08-27 04:45:19 +0000] [10996] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:19 +0000] [10996] [INFO] Worker exiting (pid: 10996)
+[2024-08-27 04:45:19 +0000] [10997] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:19 +0000] [10997] [INFO] Worker exiting (pid: 10997)
+[2024-08-27 04:45:19 +0000] [10993] [ERROR] Worker (pid:10994) exited with code 3
+[2024-08-27 04:45:19 +0000] [10993] [ERROR] Worker (pid:10995) was sent SIGTERM!
+[2024-08-27 04:45:19 +0000] [10993] [ERROR] Worker (pid:10997) was sent SIGTERM!
+[2024-08-27 04:45:19 +0000] [10993] [ERROR] Worker (pid:10996) was sent SIGTERM!
+[2024-08-27 04:45:19 +0000] [10993] [ERROR] Shutting down: Master
+[2024-08-27 04:45:19 +0000] [10993] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:45:23 +0000] [11008] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:45:23 +0000] [11008] [INFO] Listening at: http://0.0.0.0:8000 (11008)
+[2024-08-27 04:45:23 +0000] [11008] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:45:23 +0000] [11009] [INFO] Booting worker with pid: 11009
+[2024-08-27 04:45:23 +0000] [11010] [INFO] Booting worker with pid: 11010
+[2024-08-27 04:45:23 +0000] [11011] [INFO] Booting worker with pid: 11011
+[2024-08-27 04:45:23 +0000] [11012] [INFO] Booting worker with pid: 11012
+[2024-08-27 04:45:24 +0000] [11009] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:24 +0000] [11009] [INFO] Worker exiting (pid: 11009)
+[2024-08-27 04:45:24 +0000] [11010] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:24 +0000] [11010] [INFO] Worker exiting (pid: 11010)
+[2024-08-27 04:45:24 +0000] [11011] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:24 +0000] [11011] [INFO] Worker exiting (pid: 11011)
+[2024-08-27 04:45:24 +0000] [11012] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/Document-backend/venv/lib/python3.10/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/Document-backend/app/main.py", line 50, in <module>
+    logging.basicConfig(
+  File "/usr/lib/python3.10/logging/__init__.py", line 2040, in basicConfig
+    h = FileHandler(filename, mode,
+  File "/usr/lib/python3.10/logging/__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python3.10/logging/__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+FileNotFoundError: [Errno 2] No such file or directory: '/logs/access.log'
+[2024-08-27 04:45:24 +0000] [11012] [INFO] Worker exiting (pid: 11012)
+[2024-08-27 04:45:24 +0000] [11008] [ERROR] Worker (pid:11009) exited with code 3
+[2024-08-27 04:45:24 +0000] [11008] [ERROR] Worker (pid:11010) was sent SIGTERM!
+[2024-08-27 04:45:24 +0000] [11008] [ERROR] Worker (pid:11012) was sent SIGTERM!
+[2024-08-27 04:45:24 +0000] [11008] [ERROR] Worker (pid:11011) was sent SIGTERM!
+[2024-08-27 04:45:24 +0000] [11008] [ERROR] Shutting down: Master
+[2024-08-27 04:45:24 +0000] [11008] [ERROR] Reason: Worker failed to boot.
+[2024-08-27 04:45:27 +0000] [11020] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:45:27 +0000] [11020] [INFO] Listening at: http://0.0.0.0:8000 (11020)
+[2024-08-27 04:45:27 +0000] [11020] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:45:27 +0000] [11021] [INFO] Booting worker with pid: 11021
+[2024-08-27 04:45:27 +0000] [11022] [INFO] Booting worker with pid: 11022
+[2024-08-27 04:45:27 +0000] [11023] [INFO] Booting worker with pid: 11023
+[2024-08-27 04:45:27 +0000] [11024] [INFO] Booting worker with pid: 11024
+[2024-08-27 04:45:28 +0000] [11021] [INFO] Started server process [11021]
+[2024-08-27 04:45:28 +0000] [11021] [INFO] Waiting for application startup.
+[2024-08-27 04:45:28 +0000] [11021] [INFO] Application startup complete.
+[2024-08-27 04:45:28 +0000] [11023] [INFO] Started server process [11023]
+[2024-08-27 04:45:28 +0000] [11023] [INFO] Waiting for application startup.
+[2024-08-27 04:45:28 +0000] [11023] [INFO] Application startup complete.
+[2024-08-27 04:45:29 +0000] [11022] [INFO] Started server process [11022]
+[2024-08-27 04:45:29 +0000] [11022] [INFO] Waiting for application startup.
+[2024-08-27 04:45:29 +0000] [11022] [INFO] Application startup complete.
+[2024-08-27 04:45:29 +0000] [11024] [INFO] Started server process [11024]
+[2024-08-27 04:45:29 +0000] [11024] [INFO] Waiting for application startup.
+[2024-08-27 04:45:29 +0000] [11024] [INFO] Application startup complete.
+[2024-08-27 04:46:32 +0000] [11020] [INFO] Handling signal: term
+[2024-08-27 04:46:32 +0000] [11023] [INFO] Shutting down
+[2024-08-27 04:46:32 +0000] [11023] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:46:32 +0000] [11022] [INFO] Shutting down
+[2024-08-27 04:46:32 +0000] [11022] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:46:32 +0000] [11021] [INFO] Shutting down
+[2024-08-27 04:46:32 +0000] [11024] [INFO] Shutting down
+[2024-08-27 04:46:32 +0000] [11021] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:46:32 +0000] [11024] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:46:32 +0000] [11023] [INFO] Waiting for application shutdown.
+[2024-08-27 04:46:32 +0000] [11023] [INFO] Application shutdown complete.
+[2024-08-27 04:46:32 +0000] [11023] [INFO] Finished server process [11023]
+[2024-08-27 04:46:32 +0000] [11020] [ERROR] Worker (pid:11023) was sent SIGTERM!
+[2024-08-27 04:46:32 +0000] [11022] [INFO] Waiting for application shutdown.
+[2024-08-27 04:46:32 +0000] [11022] [INFO] Application shutdown complete.
+[2024-08-27 04:46:32 +0000] [11022] [INFO] Finished server process [11022]
+[2024-08-27 04:46:33 +0000] [11020] [ERROR] Worker (pid:11022) was sent SIGTERM!
+[2024-08-27 04:46:33 +0000] [11021] [INFO] Waiting for application shutdown.
+[2024-08-27 04:46:33 +0000] [11024] [INFO] Waiting for application shutdown.
+[2024-08-27 04:46:33 +0000] [11024] [INFO] Application shutdown complete.
+[2024-08-27 04:46:33 +0000] [11021] [INFO] Application shutdown complete.
+[2024-08-27 04:46:33 +0000] [11024] [INFO] Finished server process [11024]
+[2024-08-27 04:46:33 +0000] [11021] [INFO] Finished server process [11021]
+[2024-08-27 04:46:33 +0000] [11020] [ERROR] Worker (pid:11021) was sent SIGTERM!
+[2024-08-27 04:46:33 +0000] [11020] [ERROR] Worker (pid:11024) was sent SIGTERM!
+[2024-08-27 04:46:33 +0000] [11020] [INFO] Shutting down: Master
+[2024-08-27 04:46:33 +0000] [11395] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:46:33 +0000] [11395] [INFO] Listening at: http://0.0.0.0:8000 (11395)
+[2024-08-27 04:46:33 +0000] [11395] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:46:33 +0000] [11399] [INFO] Booting worker with pid: 11399
+[2024-08-27 04:46:33 +0000] [11400] [INFO] Booting worker with pid: 11400
+[2024-08-27 04:46:33 +0000] [11401] [INFO] Booting worker with pid: 11401
+[2024-08-27 04:46:33 +0000] [11402] [INFO] Booting worker with pid: 11402
+[2024-08-27 04:46:34 +0000] [11400] [INFO] Started server process [11400]
+[2024-08-27 04:46:34 +0000] [11400] [INFO] Waiting for application startup.
+[2024-08-27 04:46:34 +0000] [11400] [INFO] Application startup complete.
+[2024-08-27 04:46:34 +0000] [11399] [INFO] Started server process [11399]
+[2024-08-27 04:46:34 +0000] [11399] [INFO] Waiting for application startup.
+[2024-08-27 04:46:34 +0000] [11399] [INFO] Application startup complete.
+[2024-08-27 04:46:34 +0000] [11401] [INFO] Started server process [11401]
+[2024-08-27 04:46:34 +0000] [11402] [INFO] Started server process [11402]
+[2024-08-27 04:46:34 +0000] [11401] [INFO] Waiting for application startup.
+[2024-08-27 04:46:34 +0000] [11402] [INFO] Waiting for application startup.
+[2024-08-27 04:46:34 +0000] [11401] [INFO] Application startup complete.
+[2024-08-27 04:46:34 +0000] [11402] [INFO] Application startup complete.
+[2024-08-27 04:52:14 +0000] [11395] [INFO] Handling signal: term
+[2024-08-27 04:52:14 +0000] [11400] [INFO] Shutting down
+[2024-08-27 04:52:14 +0000] [11399] [INFO] Shutting down
+[2024-08-27 04:52:14 +0000] [11400] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:52:14 +0000] [11399] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:52:14 +0000] [11401] [INFO] Shutting down
+[2024-08-27 04:52:14 +0000] [11401] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:52:14 +0000] [11402] [INFO] Shutting down
+[2024-08-27 04:52:14 +0000] [11402] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 04:52:14 +0000] [11400] [INFO] Waiting for application shutdown.
+[2024-08-27 04:52:14 +0000] [11399] [INFO] Waiting for application shutdown.
+[2024-08-27 04:52:14 +0000] [11400] [INFO] Application shutdown complete.
+[2024-08-27 04:52:14 +0000] [11399] [INFO] Application shutdown complete.
+[2024-08-27 04:52:14 +0000] [11400] [INFO] Finished server process [11400]
+[2024-08-27 04:52:14 +0000] [11399] [INFO] Finished server process [11399]
+[2024-08-27 04:52:14 +0000] [11401] [INFO] Waiting for application shutdown.
+[2024-08-27 04:52:14 +0000] [11401] [INFO] Application shutdown complete.
+[2024-08-27 04:52:14 +0000] [11401] [INFO] Finished server process [11401]
+[2024-08-27 04:52:14 +0000] [11395] [ERROR] Worker (pid:11400) was sent SIGTERM!
+[2024-08-27 04:52:14 +0000] [11395] [ERROR] Worker (pid:11399) was sent SIGTERM!
+[2024-08-27 04:52:14 +0000] [11395] [ERROR] Worker (pid:11401) was sent SIGTERM!
+[2024-08-27 04:52:14 +0000] [11402] [INFO] Waiting for application shutdown.
+[2024-08-27 04:52:14 +0000] [11402] [INFO] Application shutdown complete.
+[2024-08-27 04:52:14 +0000] [11402] [INFO] Finished server process [11402]
+[2024-08-27 04:52:14 +0000] [11395] [ERROR] Worker (pid:11402) was sent SIGTERM!
+[2024-08-27 04:52:15 +0000] [11395] [INFO] Shutting down: Master
+[2024-08-27 04:52:15 +0000] [12667] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 04:52:15 +0000] [12667] [INFO] Listening at: http://0.0.0.0:8000 (12667)
+[2024-08-27 04:52:15 +0000] [12667] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 04:52:15 +0000] [12671] [INFO] Booting worker with pid: 12671
+[2024-08-27 04:52:15 +0000] [12672] [INFO] Booting worker with pid: 12672
+[2024-08-27 04:52:15 +0000] [12673] [INFO] Booting worker with pid: 12673
+[2024-08-27 04:52:15 +0000] [12674] [INFO] Booting worker with pid: 12674
+[2024-08-27 04:52:16 +0000] [12671] [INFO] Started server process [12671]
+[2024-08-27 04:52:16 +0000] [12671] [INFO] Waiting for application startup.
+[2024-08-27 04:52:16 +0000] [12671] [INFO] Application startup complete.
+[2024-08-27 04:52:16 +0000] [12672] [INFO] Started server process [12672]
+[2024-08-27 04:52:16 +0000] [12672] [INFO] Waiting for application startup.
+[2024-08-27 04:52:16 +0000] [12672] [INFO] Application startup complete.
+[2024-08-27 04:52:16 +0000] [12673] [INFO] Started server process [12673]
+[2024-08-27 04:52:16 +0000] [12673] [INFO] Waiting for application startup.
+[2024-08-27 04:52:16 +0000] [12673] [INFO] Application startup complete.
+[2024-08-27 04:52:16 +0000] [12674] [INFO] Started server process [12674]
+[2024-08-27 04:52:16 +0000] [12674] [INFO] Waiting for application startup.
+[2024-08-27 04:52:16 +0000] [12674] [INFO] Application startup complete.
+[2024-08-27 04:58:35 +0000] [12674] [WARNING] Invalid HTTP request received.
+[2024-08-27 05:00:26 +0000] [12667] [INFO] Handling signal: term
+[2024-08-27 05:00:26 +0000] [12673] [INFO] Shutting down
+[2024-08-27 05:00:26 +0000] [12672] [INFO] Shutting down
+[2024-08-27 05:00:26 +0000] [12673] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:00:26 +0000] [12672] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:00:26 +0000] [12671] [INFO] Shutting down
+[2024-08-27 05:00:26 +0000] [12671] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:00:26 +0000] [12674] [INFO] Shutting down
+[2024-08-27 05:00:26 +0000] [12674] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:00:26 +0000] [12673] [INFO] Waiting for application shutdown.
+[2024-08-27 05:00:26 +0000] [12672] [INFO] Waiting for application shutdown.
+[2024-08-27 05:00:26 +0000] [12673] [INFO] Application shutdown complete.
+[2024-08-27 05:00:26 +0000] [12672] [INFO] Application shutdown complete.
+[2024-08-27 05:00:26 +0000] [12673] [INFO] Finished server process [12673]
+[2024-08-27 05:00:26 +0000] [12672] [INFO] Finished server process [12672]
+[2024-08-27 05:00:26 +0000] [12667] [ERROR] Worker (pid:12673) was sent SIGTERM!
+[2024-08-27 05:00:26 +0000] [12667] [ERROR] Worker (pid:12672) was sent SIGTERM!
+[2024-08-27 05:00:26 +0000] [12674] [INFO] Waiting for application shutdown.
+[2024-08-27 05:00:26 +0000] [12674] [INFO] Application shutdown complete.
+[2024-08-27 05:00:26 +0000] [12674] [INFO] Finished server process [12674]
+[2024-08-27 05:00:26 +0000] [12671] [INFO] Waiting for application shutdown.
+[2024-08-27 05:00:26 +0000] [12671] [INFO] Application shutdown complete.
+[2024-08-27 05:00:26 +0000] [12671] [INFO] Finished server process [12671]
+[2024-08-27 05:00:26 +0000] [12667] [ERROR] Worker (pid:12674) was sent SIGTERM!
+[2024-08-27 05:00:26 +0000] [12667] [ERROR] Worker (pid:12671) was sent SIGTERM!
+[2024-08-27 05:00:26 +0000] [12667] [INFO] Shutting down: Master
+[2024-08-27 05:00:26 +0000] [13590] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 05:00:26 +0000] [13590] [INFO] Listening at: http://0.0.0.0:8000 (13590)
+[2024-08-27 05:00:26 +0000] [13590] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 05:00:26 +0000] [13593] [INFO] Booting worker with pid: 13593
+[2024-08-27 05:00:26 +0000] [13594] [INFO] Booting worker with pid: 13594
+[2024-08-27 05:00:26 +0000] [13595] [INFO] Booting worker with pid: 13595
+[2024-08-27 05:00:27 +0000] [13596] [INFO] Booting worker with pid: 13596
+[2024-08-27 05:00:27 +0000] [13593] [INFO] Started server process [13593]
+[2024-08-27 05:00:27 +0000] [13593] [INFO] Waiting for application startup.
+[2024-08-27 05:00:27 +0000] [13593] [INFO] Application startup complete.
+[2024-08-27 05:00:27 +0000] [13594] [INFO] Started server process [13594]
+[2024-08-27 05:00:27 +0000] [13594] [INFO] Waiting for application startup.
+[2024-08-27 05:00:27 +0000] [13594] [INFO] Application startup complete.
+[2024-08-27 05:00:27 +0000] [13595] [INFO] Started server process [13595]
+[2024-08-27 05:00:27 +0000] [13595] [INFO] Waiting for application startup.
+[2024-08-27 05:00:27 +0000] [13595] [INFO] Application startup complete.
+[2024-08-27 05:00:28 +0000] [13596] [INFO] Started server process [13596]
+[2024-08-27 05:00:28 +0000] [13596] [INFO] Waiting for application startup.
+[2024-08-27 05:00:28 +0000] [13596] [INFO] Application startup complete.
+[2024-08-27 05:08:51 +0000] [13590] [INFO] Handling signal: term
+[2024-08-27 05:08:51 +0000] [13595] [INFO] Shutting down
+[2024-08-27 05:08:51 +0000] [13596] [INFO] Shutting down
+[2024-08-27 05:08:51 +0000] [13594] [INFO] Shutting down
+[2024-08-27 05:08:51 +0000] [13593] [INFO] Shutting down
+[2024-08-27 05:08:51 +0000] [13595] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:08:51 +0000] [13596] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:08:51 +0000] [13594] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:08:51 +0000] [13593] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-08-27 05:08:51 +0000] [13596] [INFO] Waiting for application shutdown.
+[2024-08-27 05:08:51 +0000] [13594] [INFO] Waiting for application shutdown.
+[2024-08-27 05:08:51 +0000] [13595] [INFO] Waiting for application shutdown.
+[2024-08-27 05:08:51 +0000] [13593] [INFO] Waiting for application shutdown.
+[2024-08-27 05:08:51 +0000] [13596] [INFO] Application shutdown complete.
+[2024-08-27 05:08:51 +0000] [13594] [INFO] Application shutdown complete.
+[2024-08-27 05:08:51 +0000] [13595] [INFO] Application shutdown complete.
+[2024-08-27 05:08:51 +0000] [13596] [INFO] Finished server process [13596]
+[2024-08-27 05:08:51 +0000] [13594] [INFO] Finished server process [13594]
+[2024-08-27 05:08:51 +0000] [13593] [INFO] Application shutdown complete.
+[2024-08-27 05:08:51 +0000] [13595] [INFO] Finished server process [13595]
+[2024-08-27 05:08:51 +0000] [13593] [INFO] Finished server process [13593]
+[2024-08-27 05:08:51 +0000] [13590] [ERROR] Worker (pid:13595) was sent SIGTERM!
+[2024-08-27 05:08:51 +0000] [13590] [ERROR] Worker (pid:13594) was sent SIGTERM!
+[2024-08-27 05:08:51 +0000] [13590] [ERROR] Worker (pid:13593) was sent SIGTERM!
+[2024-08-27 05:08:51 +0000] [13590] [ERROR] Worker (pid:13596) was sent SIGTERM!
+[2024-08-27 05:08:51 +0000] [13590] [INFO] Shutting down: Master
+[2024-08-27 05:08:51 +0000] [15727] [INFO] Starting gunicorn 23.0.0
+[2024-08-27 05:08:51 +0000] [15727] [INFO] Listening at: http://0.0.0.0:8000 (15727)
+[2024-08-27 05:08:51 +0000] [15727] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-08-27 05:08:51 +0000] [15733] [INFO] Booting worker with pid: 15733
+[2024-08-27 05:08:52 +0000] [15734] [INFO] Booting worker with pid: 15734
+[2024-08-27 05:08:52 +0000] [15738] [INFO] Booting worker with pid: 15738
+[2024-08-27 05:08:52 +0000] [15739] [INFO] Booting worker with pid: 15739
+[2024-08-27 05:08:53 +0000] [15733] [INFO] Started server process [15733]
+[2024-08-27 05:08:53 +0000] [15733] [INFO] Waiting for application startup.
+[2024-08-27 05:08:53 +0000] [15733] [INFO] Application startup complete.
+[2024-08-27 05:08:53 +0000] [15734] [INFO] Started server process [15734]
+[2024-08-27 05:08:53 +0000] [15734] [INFO] Waiting for application startup.
+[2024-08-27 05:08:53 +0000] [15734] [INFO] Application startup complete.
+[2024-08-27 05:08:53 +0000] [15738] [INFO] Started server process [15738]
+[2024-08-27 05:08:53 +0000] [15738] [INFO] Waiting for application startup.
+[2024-08-27 05:08:53 +0000] [15738] [INFO] Application startup complete.
+[2024-08-27 05:08:53 +0000] [15739] [INFO] Started server process [15739]
+[2024-08-27 05:08:53 +0000] [15739] [INFO] Waiting for application startup.
+[2024-08-27 05:08:53 +0000] [15739] [INFO] Application startup complete.
