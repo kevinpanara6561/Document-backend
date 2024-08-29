@@ -1,42 +1,28 @@
-152.59.17.208:51275 - "GET /docs HTTP/1.1" 200
-152.59.17.208:51274 - "GET /openapi.json HTTP/1.1" 200
-152.59.17.208:51825 - "POST /login HTTP/1.1" 200
-152.59.17.208:53133 - "POST /upload-invoice HTTP/1.1" 200
-152.59.17.208:54785 - "POST /upload-invoice HTTP/1.1" 500
-152.59.17.208:55803 - "POST /upload-invoice HTTP/1.1" 200
-152.59.17.208:58410 - "POST /upload-invoice HTTP/1.1" 500
-152.59.17.208:60599 - "POST /upload-invoice HTTP/1.1" 200
-152.59.17.208:61914 - "POST /upload-invoice HTTP/1.1" 200
-152.59.17.208:50129 - "GET /docs HTTP/1.1" 200
-152.59.17.208:50129 - "GET /openapi.json HTTP/1.1" 200
-152.59.17.208:51589 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:51594 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:51995 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:51990 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:53401 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:53404 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:53584 - "POST /upload-invoice HTTP/1.1" 200
-152.59.17.208:54357 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:54361 - "GET /docs HTTP/1.1" 200
-152.59.17.208:54361 - "GET /openapi.json HTTP/1.1" 200
-152.59.17.208:54629 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:55676 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:55681 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:57045 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:50951 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:59721 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:60215 - "GET /openapi.json HTTP/1.1" 200
-152.59.17.208:62454 - "GET /docs HTTP/1.1" 200
-152.59.17.208:62454 - "GET /openapi.json HTTP/1.1" 200
-152.59.17.208:63370 - "POST /login HTTP/1.1" 200
-152.59.17.208:63634 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:63819 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:49948 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:49987 - "POST /upload-invoice HTTP/1.1" 422
-152.59.17.208:51331 - "GET /docs HTTP/1.1" 200
-152.59.17.208:51331 - "GET /openapi.json HTTP/1.1" 200
-152.59.17.208:51597 - "POST /upload-invoice HTTP/1.1" 422
-152.59.19.155:51504 - "GET /docs HTTP/1.1" 200
-152.59.19.155:51504 - "GET /openapi.json HTTP/1.1" 200
-152.59.19.155:52487 - "GET /docs HTTP/1.1" 200
-152.59.19.155:52487 - "GET /openapi.json HTTP/1.1" 200
+152.59.18.132:50507 - "GET /docs HTTP/1.1" 200
+152.59.18.132:50507 - "GET /openapi.json HTTP/1.1" 200
+152.59.18.132:50506 - "POST /register HTTP/1.1" 200
+152.59.18.132:52108 - "GET /verify-email?token=gepUN2JXbgBlqwb7voeFMcpW4xZLRfNY0wuu67wUIfcMx8VCZk HTTP/1.1" 200
+152.59.18.132:52475 - "POST /login HTTP/1.1" 200
+2024-08-29 06:19:00 - root - INFO - path: server
+2024-08-29 06:19:00 - root - INFO - websocket message
+2024-08-29 06:19:14 - botocore.credentials - INFO - Found credentials in environment variables.
+152.59.18.132:53421 - "POST /upload-invoice HTTP/1.1" 500
+2024-08-29 06:19:24 - root - INFO - Client disconnected from host: server
+2024-08-29 06:20:58 - root - INFO - path: server
+2024-08-29 06:20:58 - root - INFO - websocket message
+2024-08-29 06:21:06 - botocore.credentials - INFO - Found credentials in environment variables.
+152.59.18.132:54714 - "POST /upload-invoice HTTP/1.1" 200
+2024-08-29 06:21:24 - root - INFO - Client disconnected from host: server
+2024-08-29 06:22:00 - root - INFO - path: server
+2024-08-29 06:22:00 - root - INFO - websocket message
+152.59.18.132:55413 - "POST /upload-invoice HTTP/1.1" 200
+2024-08-29 06:22:21 - root - INFO - Received data: {"category": "BusinessDocuments", "sub_category": "Sales Invoice", "document_id": "2bd0eed5-5e48-4c85-a56f-246f42521402"}
+2024-08-29 06:22:21 - root - INFO - Parsed JSON data: {'category': 'BusinessDocuments', 'sub_category': 'Sales Invoice', 'document_id': '2bd0eed5-5e48-4c85-a56f-246f42521402'}
+2024-08-29 06:22:50 - root - INFO - Client disconnected from host: server
+2024-08-29 06:23:35 - root - INFO - path: server
+2024-08-29 06:23:35 - root - INFO - websocket message
+2024-08-29 06:23:47 - botocore.credentials - INFO - Found credentials in environment variables.
+152.59.18.132:56512 - "POST /upload-invoice HTTP/1.1" 200
+2024-08-29 06:24:00 - root - INFO - Received data: {"category": "BusinessDocuments", "sub_category": "Sales Invoice", "document_id": "bff2464f-89d4-4981-baa4-7df69d1985db"}
+2024-08-29 06:24:00 - root - INFO - Parsed JSON data: {'category': 'BusinessDocuments', 'sub_category': 'Sales Invoice', 'document_id': 'bff2464f-89d4-4981-baa4-7df69d1985db'}
+2024-08-29 06:24:25 - root - INFO - Client disconnected from host: server

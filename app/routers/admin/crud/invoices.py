@@ -5,7 +5,7 @@ from PyPDF2 import PdfWriter
 from fastapi import UploadFile
 from app.libs.s3_service import upload_file_to_s3
 from app.libs.utils import generate_id, generate_presigned_url
-from app.models import InvoiceModel
+from app.models import DocumentModel
 from sqlalchemy.orm import Session
 import os
 from dotenv import load_dotenv
@@ -19,7 +19,7 @@ load_dotenv()
 bucket_name = os.getenv("AWS_BUCKET")
 
 def create_invoice(db: Session, file_path: str, file_name: str, file_type: str, admin_user_id: str, password: str):
-    invoice = InvoiceModel(
+    invoice = DocumentModel(
         id=generate_id(),
         name=file_name,
         file_path=file_path,
@@ -86,10 +86,10 @@ def get_invoices(
     limit: int,
     invoice_id: Optional[str] = None
 ) -> schemas.InvoiceResponseList:
-    query = db.query(InvoiceModel).filter(InvoiceModel.is_deleted == False)
+    query = db.query(DocumentModel).filter(DocumentModel.is_deleted == False)
 
     if invoice_id:
-        query = query.filter(InvoiceModel.id == invoice_id)
+        query = query.filter(DocumentModel.id == invoice_id)
 
     count = query.count()
 
