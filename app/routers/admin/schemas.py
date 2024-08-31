@@ -142,3 +142,19 @@ class InvoiceResponse(BaseModel):
 class InvoiceResponseList(BaseModel):
     count: int
     data: List[InvoiceResponse]
+    
+class SubCategoryResponse(BaseModel):
+    id: str
+    name: str
+    documents: List[InvoiceResponse]
+    
+    class Config:
+        orm_mode = True
+    
+class CategoryResponse(BaseModel):
+    id: str
+    name: str
+    sub_categories: List[SubCategoryResponse]
+    
+    class Config:
+        orm_mode = True

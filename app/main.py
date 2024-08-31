@@ -101,6 +101,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 db.commit()
                 
                 db_document.category_id = new_sub_catgory.id
+                db_document.status = json_data['status']
                 db.commit()
                 
             else:
@@ -115,10 +116,12 @@ async def websocket_endpoint(websocket: WebSocket):
                     db.commit()
                     
                     db_document.category_id = new_sub_catgory.id
+                    db_document.status = json_data['status']
                     db.commit()
                     
                 else:
                     db_document.category_id = db_sub_category.id
+                    db_document.status = json_data['status']
                     db.commit()
             
             # Create a new entry in the database

@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+import logging
 from typing import List, Optional
 
 from fastapi import (
@@ -22,7 +23,8 @@ from app.dependencies import get_db
 from app.routers.admin import schemas
 from app.routers.admin.crud import (
     admin_users,
-    invoices
+    invoices,
+    whatsapp
 )
 from fastapi.responses import HTMLResponse
 
@@ -193,3 +195,32 @@ def list_invoices(
     # Fetch invoices with pagination
     paginated_invoices = invoices.get_invoices(db, start=start, limit=limit)
     return paginated_invoices
+
+@router.get("/documents", response_model=List[schemas.CategoryResponse], tags=['Documents'])
+def get_all_documents(
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+):
+    admin_user = admin_users.verify_token(db, token=token)
+    admin_user_id = admin_user.id
+    
+    # Fetch invoices with pagination
+    data = invoices.get_documents(db=db, admin_user_id=admin_user_id)
+    return data
+
+VERIFY_TOKEN = "ileWgE0aa6otQjlXUBFy6crtfmWMwbIG"
+
+@router.get("/receive-message-whatsapp", tags=["Whatsapp"])
+async def verify_webhook(request: Request):
+    verify_token = request.query_params.get('hub.verify_token')
+    challenge = request.query_params.get('hub.challenge')
+    
+    if verify_token == VERIFY_TOKEN:
+        return int(challenge)
+    return {"message": "Invalid token"}
+
+@router.post("/receive-message-whatsapp", tags=["Whatsapp"])
+async def receive_whatsapp_message(request: Request, db: Session = Depends(get_db)):
+    logging.info("called")
+    await whatsapp.receive_data(request=request, db=db)
+    return {"data":"success"}
