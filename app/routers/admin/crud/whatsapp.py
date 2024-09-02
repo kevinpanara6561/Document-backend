@@ -9,9 +9,16 @@ from app.libs.s3_service import upload_file_to_s3
 from app.libs.utils import generate_id
 from app.models import AdminUserModel, DocumentModel
 from app.routers.admin.crud.invoices import generate_unique_filename
+from dotenv import load_dotenv
+
+load_dotenv()
+
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+WHATSAPP_API_URL = os.getenv('WHATSAPP_API_URL')
+WELCOME_TEMPLATE = os.getenv('WELCOME_TEMPLATE')
+CLASSIFICATION_TEMPLATE = os.getenv('CLASSIFICATION_TEMPLATE')
 
 async def receive_data(request, db):
-    logging.info("called")
     data = await request.json()
 
     logging.info(f"Received data: {data}")
@@ -33,9 +40,8 @@ def process_change(change, db):
 
 def process_message(message, db):
     message_type = message.get('type')
-    wa_id = message.get('from')  # Extract the phone number from 'from'
+    wa_id = message.get('from')
     
-    # Fetch admin_user_id from the admin_users table
     admin_user = get_admin_user_by_phone(wa_id, db)
     if not admin_user:
         logging.error(f"No admin user found for phone number {wa_id}")
@@ -44,16 +50,13 @@ def process_message(message, db):
     admin_user_id = admin_user.id
     
     if message_type == 'document':
-        # Process the document
         document = message['document']
         media_id = document['id']
         file_name = document['filename']
         mime_type = document['mime_type']
         
-        # Log the received document details
         logging.info(f"Received document: {file_name} (Type: {mime_type})")
         
-        # Download and save the document to S3
         file_url = download_media(media_id)
         
         if file_url:
@@ -106,7 +109,6 @@ def save_to_s3(db: Session, file_name: str, file_content: bytes, mime_type: str)
         unique_file_name = generate_unique_filename(db, original_file_name)
         s3_key = f"invoices/{unique_file_name}"
         
-        # Upload the file object to S3 with the correct MIME type
         s3_url = upload_file_to_s3(file_content, os.getenv("AWS_BUCKET"), s3_key, mime_type)
         
         logging.info(f"File {unique_file_name} saved to S3 in 'invoices' folder successfully")
@@ -117,17 +119,14 @@ def save_to_s3(db: Session, file_name: str, file_content: bytes, mime_type: str)
 
 
 
-# Sample send message function (dummy)
 def send_welcome_message_with_image(wa_id: str):
-    # Implement WhatsApp message sending logic here
     pass
 
 def create_document(db: Session, file_path: str, file_name: str, file_type: str, admin_user_id: str):
-    logging.info("caleddddddddddddddd")
     document = DocumentModel(
         id=generate_id(),
         name=file_name,
-        file_path=file_path,  # S3 URL
+        file_path=file_path,
         file_type=file_type,
         admin_user_id=admin_user_id
     )
@@ -142,3 +141,76 @@ def create_document(db: Session, file_path: str, file_name: str, file_type: str,
 def get_admin_user_by_phone(phone_number: str, db: Session):
     return db.query(AdminUserModel).filter(AdminUserModel.phone == phone_number).first()
 
+def send_whatsapp_request(payload, success_log, error_log):
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {ACCESS_TOKEN}"
+    }
+    response = requests.post(WHATSAPP_API_URL, headers=headers, json=payload)
+    
+    if response.status_code == 200:
+        logging.info(success_log)
+        return True, None
+    else:
+        logging.error("%s: %s", error_log, response.text)
+        return False, None
+
+def send_welcome_template(recipient_id, name):
+    payload = {
+    "messaging_product": "whatsapp",
+    "recipient_type": "individual",
+    "to": recipient_id,
+    "type": "template",
+    "template": {
+        "name": WELCOME_TEMPLATE,
+        "language": {
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "body",
+                "parameters": [
+                    {
+                        "type": "text",
+                        "text": name
+                    }
+                ]
+            }
+        ]
+    }
+}
+    send_whatsapp_request(payload, "Template sent successfully.", "Failed to send template.")
+    
+def send_classification_template(recipient_id, result, category, sub_category):
+    payload = {
+    "messaging_product": "whatsapp",
+    "recipient_type": "individual",
+    "to": recipient_id,
+    "type": "template",
+    "template": {
+        "name": CLASSIFICATION_TEMPLATE,
+        "language": {
+            "code": "en"
+        },
+        "components": [
+            {
+                "type": "body",
+                "parameters": [
+                    {
+                        "type": "text",
+                        "text": result
+                    },
+                    {
+                        "type": "text",
+                        "text": category
+                    },
+                    {
+                        "type": "text",
+                        "text": sub_category
+                    }
+                ]
+            }
+        ]
+    }
+}
+    send_whatsapp_request(payload, "Template sent successfully.", "Failed to send template.")

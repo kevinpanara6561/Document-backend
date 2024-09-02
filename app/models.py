@@ -62,11 +62,13 @@ class CategoryModel(Base):
     id = Column(String(36), primary_key=True)
     name = Column(String(100),nullable=False) 
     parent_id = Column(String(36), ForeignKey("categories.id"), nullable=True)
+    admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=True)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now)
     
     parent = relationship("CategoryModel", remote_side=[id], backref="subcategories")
+    admin_user = relationship("AdminUserModel", backref="categories")
     
 class DocumentModel(Base):
     __tablename__ = "documents"
@@ -94,6 +96,7 @@ class ExtractedDataModel(Base):
     data = Column(JSON, nullable=True)
     document_id = Column(String(36), ForeignKey("documents.id"), nullable=True)
     classification_result = Column(String(255), nullable=False)
+    is_signatured = Column(Boolean, nullable=False, default=False)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now)
