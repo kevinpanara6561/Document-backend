@@ -9,8 +9,9 @@ from fastapi.responses import JSONResponse
 
 from app.database import SessionLocal
 from app.libs.utils import file_cleanup, generate_id
-from app.models import CategoryModel, DocumentModel, ExtractedDataModel
+from app.models import AdminUserModel, CategoryModel, DocumentModel, ExtractedDataModel
 from app.routers.admin import api as admin
+from app.routers.admin.crud.whatsapp import send_classification_template
 
 app = FastAPI(
     title="DocumentX",
@@ -70,6 +71,7 @@ async def websocket_endpoint(websocket: WebSocket):
     socket.add(websocket)
     
     try:
+        logging.info("in try")
         while True:
             data = await websocket.receive_text()
             logging.info(f"Received data: {data}")
@@ -81,12 +83,14 @@ async def websocket_endpoint(websocket: WebSocket):
             db_category = db.query(CategoryModel).filter(CategoryModel.name == json_data['category'], CategoryModel.is_deleted == False).first()
             db_sub_category = db.query(CategoryModel).filter(CategoryModel.name == json_data['sub_category'], CategoryModel.is_deleted == False).first()
             db_document = db.query(DocumentModel).filter(DocumentModel.id == json_data['document_id'], DocumentModel.is_deleted == False).first()
+            db_admin_user = db.query(AdminUserModel).filter(AdminUserModel.id == db_document.admin_user_id, AdminUserModel.is_deleted == False).first()
             
             if not db_category:
                 new_category = CategoryModel(
                     id = generate_id(),
                     name = json_data['category'],
-                    parent_id = None
+                    parent_id = None,
+                    admin_user_id = json_data['admin_user_id']
                 )
                 db.add(new_category)
                 db.commit()
@@ -94,7 +98,8 @@ async def websocket_endpoint(websocket: WebSocket):
                 new_sub_catgory = CategoryModel(
                     id = generate_id(),
                     name = json_data['sub_category'],
-                    parent_id = new_category.id
+                    parent_id = new_category.id,
+                    admin_user_id = json_data['admin_user_id']
                 )
                 
                 db.add(new_sub_catgory)
@@ -103,13 +108,14 @@ async def websocket_endpoint(websocket: WebSocket):
                 db_document.category_id = new_sub_catgory.id
                 db_document.status = json_data['status']
                 db.commit()
-                
+                                
             else:
                 if not db_sub_category:
                     new_sub_catgory = CategoryModel(
                         id = generate_id(),
                         name = json_data['sub_category'],
-                        parent_id = db_category.id
+                        parent_id = db_category.id,
+                        admin_user_id = json_data['admin_user_id']
                     )
                     
                     db.add(new_sub_catgory)
@@ -134,7 +140,13 @@ async def websocket_endpoint(websocket: WebSocket):
             
             db.add(new_data)
             db.commit()
-
+            
+            try:
+                logging.info("in whatsapp try")
+                send_classification_template(db_admin_user.phone, json_data['sub_category'], json_data['category'], json_data['sub_category'])
+            except Exception as e:
+                logging.error(e)
+            
             for conn in socket:
                 if conn.query_params.get("host", "default_host") == "local":
                     logging.info(f"Sending data to local client: {data}")

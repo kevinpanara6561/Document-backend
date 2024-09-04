@@ -23,6 +23,7 @@ from app.dependencies import get_db
 from app.routers.admin import schemas
 from app.routers.admin.crud import (
     admin_users,
+    emails,
     invoices,
     whatsapp
 )
@@ -221,6 +222,15 @@ async def verify_webhook(request: Request):
 
 @router.post("/receive-message-whatsapp", tags=["Whatsapp"])
 async def receive_whatsapp_message(request: Request, db: Session = Depends(get_db)):
-    logging.info("called")
     await whatsapp.receive_data(request=request, db=db)
     return {"data":"success"}
+
+@router.post("/emails", tags=["Email"])
+def add_email(
+    request: schemas.EmailCreateRequest,
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+    ):
+    admin_user = admin_users.verify_token(db=db, token=token)
+    data = emails.add_email(request=request, db=db, admin_user_id=admin_user.id)
+    return {'message':"Email added successfully"}

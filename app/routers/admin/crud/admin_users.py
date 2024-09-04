@@ -1,4 +1,5 @@
 import json
+import logging
 import traceback
 from typing import Optional
 import os
@@ -13,6 +14,7 @@ from app.libs.emails import send_email
 from app.libs.utils import date_time_diff_min, generate_id, generate_otp, generate_verification_token, now
 from app.models import AdminUserModel, AdminUserOtpModel
 from app.routers.admin.crud.email_templates import forgot_password, send_verify_email
+from app.routers.admin.crud.whatsapp import send_welcome_template
 from app.routers.admin.schemas import (
     AdminUserChangePassword,
     AdminUserResetPassword,
@@ -101,39 +103,39 @@ def register(db: Session, request: Register):
     if db_admin_user:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="User already exists")
     
-    # Create the admin user
+    phone_number = f"91{request.phone}"
+    
     admin_user = AdminUserModel(
         id=generate_id(),
         name=request.name,
         email=request.email,
-        phone=request.phone,
+        phone=phone_number,
         password=create_password(request.password),
     )
     
-    # Add user to the database
     db.add(admin_user)
     db.commit()
     db.refresh(admin_user)
     
-    # Generate a verification token and link
     verification_token = generate_verification_token()
     verification_link = f"https://doculens.ddns.net/verify-email?token={verification_token}"
     
-    # Store the verification token in the database (you may need to add a field for it)
     admin_user.verification_token = verification_token
     db.commit()
     
-    # Send verification email
     email_content = send_verify_email(admin_user.name, verification_link)
     send_email([admin_user.email], "Verify your email address", email_content)
+    
+    try:
+        send_welcome_template(recipient_id=phone_number, name=request.name)
+    except Exception as e:
+        logging.info(e)
     
     return {"message": "User registered successfully. Please check your email to verify your account."}
 
 
 def verify_email(db: Session, token: str):
-    print(token)
     user = db.query(AdminUserModel).filter(AdminUserModel.verification_token == token).first()
-    print(user)
     
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Invalid or expired token")

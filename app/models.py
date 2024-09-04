@@ -8,7 +8,8 @@ from sqlalchemy import (
     ForeignKey,
     String,
     JSON,
-    Enum
+    Enum,
+    Text
 )
 from sqlalchemy.orm import relationship
 
@@ -102,4 +103,32 @@ class ExtractedDataModel(Base):
     updated_at = Column(DateTime, nullable=False, default=datetime.now)
     
     document = relationship("DocumentModel", backref="extracted_datas")
+    
+class EmailModel(Base):
+    __tablename__ = "emails"
+    
+    id = Column(String(36), primary_key=True)
+    name = Column(String(100), nullable=False)
+    email = Column(String(100), nullable=False)
+    password = Column(String(255), nullable=False)
+    phone = Column(String(15), nullable=False)
+    admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=False)
+    is_deleted = Column(Boolean, nullable=False, default=False)
+    created_at = Column(DateTime, nullable=False, default=datetime.now)
+    updated_at = Column(DateTime, nullable=False, default=datetime.now)
+    
+    admin_user = relationship("AdminUserModel", backref="emails")
+    
+class EmailDataModel(Base):
+    __tablename__ = "email_datas"
+    
+    id = Column(String(36), primary_key=True)
+    sender = Column(String(100), nullable=True)
+    subject = Column(String(100), nullable=True)
+    body = Column(Text, nullable=True)
+    email_id = Column(String(36), ForeignKey("emails.id"), nullable=False)
+    
+    email = relationship("EmailModel", backref="email_datas")
+    
+    
     

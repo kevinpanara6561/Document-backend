@@ -129,7 +129,8 @@ def get_invoices(
 def get_documents(db: Session, admin_user_id: int) -> List[CategoryResponse]:
     categories = db.query(CategoryModel).filter(
         CategoryModel.parent_id == None,
-        CategoryModel.is_deleted == False
+        CategoryModel.is_deleted == False,
+        CategoryModel.admin_user_id == admin_user_id
     ).all()
     
     category_responses = []
@@ -137,7 +138,8 @@ def get_documents(db: Session, admin_user_id: int) -> List[CategoryResponse]:
     for category in categories:
         sub_categories = db.query(CategoryModel).filter(
             CategoryModel.parent_id == category.id,
-            CategoryModel.is_deleted == False
+            CategoryModel.is_deleted == False,
+            CategoryModel.admin_user_id == admin_user_id
         ).all()
         
         sub_category_responses = []

@@ -158,3 +158,10 @@ class CategoryResponse(BaseModel):
     
     class Config:
         orm_mode = True
+        
+class EmailCreateRequest(BaseModel):
+    name: str
+    email: str
+    phone: str
+    password: str
+    
