@@ -2,9 +2,12 @@ import imapclient
 import email
 from email.header import decode_header
 from app.database import SessionLocal
-from app.models import EmailDataModel, EmailModel
+from app.libs.utils import generate_id
+from app.models import DocumentModel, EmailDataModel, EmailModel
 import threading
 import time
+
+from app.routers.admin.crud.whatsapp import save_to_s3
 
 # Set up your email credentials
 db = SessionLocal()
@@ -29,6 +32,22 @@ def save_email_to_db(email_id, subject, sender, body):
         db.rollback()
         print(f"Error saving email ID {email_id}: {e}")
 
+def save_email_document(file_name,file_path,file_type,admin_user_id):
+    try:
+        email = DocumentModel(
+            id=generate_id(),
+            name=file_name,
+            file_path=file_path,
+            file_type=file_type,
+            admin_user_id=admin_user_id
+        )
+        db.add(email)
+        db.commit()
+        db.refresh(email)
+    except Exception as e:
+        db.rollback()
+        print(f"Error saving email : {e}")
+
 # Function to decode email body with fallback encodings
 def decode_email_body(part):
     try:
@@ -40,12 +59,14 @@ def decode_email_body(part):
 def fetch_email(imap, email_id):
     try:
         print(f"Fetching email ID: {email_id}")
-        raw_message = imap.fetch([email_id], ['RFC822'])
+        messages = imap.search(['UNSEEN'])
+        latest_email_id = max(messages)
+        raw_message = imap.fetch([str(latest_email_id).encode()], ['RFC822'])
         
         if not raw_message:
-            print(f"No data returned for email ID {email_id}")
+            print(f"No data returned for email ID {latest_email_id}")
         else:
-            raw_email = raw_message[email_id][b'RFC822']
+            raw_email = raw_message[latest_email_id][b'RFC822']
             msg = email.message_from_bytes(raw_email)
 
             # Decode the email subject
@@ -60,26 +81,35 @@ def fetch_email(imap, email_id):
             body = ""
             if msg.is_multipart():
                 for part in msg.walk():
+                    attachment = part.get_content_disposition()
                     content_type = part.get_content_type()
+                    if attachment:
+                        if attachment == "attachment":
+                            file_name = part.get_filename()
+                            mime_type = part.get_content_type()
+                            file_content = part.get_payload(decode=True)
+                            file_path = save_to_s3(db=db, file_name=file_name, file_content=file_content, mime_type=mime_type)
+                            save_email_document(file_name=file_name, file_path=file_path, file_type=mime_type, admin_user_id=db_email.admin_user_id)
+                            print("yes its attachment")
                     if content_type == "text/plain" or content_type == "text/html":
-                        body = decode_email_body(part)
-                        break  # Stop after finding the first text or HTML part
+                        if body:
+                            continue
+                        else:
+                            body = decode_email_body(part)
+                        # break  # Stop after finding the first text or HTML part
             else:
                 body = decode_email_body(msg)
-
+            # print(body)
             # Save email to the MySQL database using SQLAlchemy
-            save_email_to_db(email_id, subject, from_, body)
-            print(f"Email ID {email_id} processed and saved.")
+            save_email_to_db(latest_email_id, subject, from_, body)
+            print(f"Email ID {latest_email_id} processed and saved.")
     except Exception as e:
         print(f"An error occurred while fetching email ID {email_id}: {e}")
 
 # Function to process new emails
 def process_new_emails(imap, email_ids):
     for email_id in email_ids:
-        # Start a new thread for each email fetch operation
-        thread = threading.Thread(target=fetch_email, args=(imap, email_id))
-        thread.start()
-        thread.join()  # Wait for the thread to complete
+        fetch_email(imap,email_id)
 
 def idle_for_new_emails():
     # Connect to the IMAP server
@@ -111,15 +141,8 @@ def idle_for_new_emails():
                     email_ids = [str(uid[0]) for uid in response if isinstance(uid, tuple) and uid[1] == b'EXISTS']
                     if email_ids:
                         print("New email(s) received!")
+                        imap.idle_done()
                         process_new_emails(imap, email_ids)
-
-                # End IDLE mode
-                try:
-                    imap.idle_done()
-                    print("IDLE mode ended.")
-                except Exception as e:
-                    print(f"An error occurred while ending IDLE mode: {e}")
-                    time.sleep(5)  # Sleep before retrying if unable to end IDLE mode
             
             except Exception as e:
                 print(f"An error occurred during IDLE check: {e}")
@@ -127,11 +150,11 @@ def idle_for_new_emails():
                 time.sleep(5)  # Sleep before retrying in case of an error
             
             print("Re-entering IDLE mode...")
-            try:
-                imap.idle()
-            except Exception as e:
-                print(f"An error occurred while re-entering IDLE mode: {e}")
-                time.sleep(5)  # Sleep before retrying if unable to re-enter IDLE mode
+            # try:
+            #     imap.idle()
+            # except Exception as e:
+            #     print(f"An error occurred while re-entering IDLE mode: {e}")
+            #     time.sleep(5)  # Sleep before retrying if unable to re-enter IDLE mode
     
     finally:
         # Close the connection and logout
