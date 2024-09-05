@@ -80,15 +80,20 @@ class DocumentModel(Base):
     file_type = Column(String(100), nullable=False)
     admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=False)
     category_id = Column(String(36), ForeignKey("categories.id"), nullable=True)
+    parent_id = Column(String(36), ForeignKey("documents.id"), nullable=True)
     is_priroty = Column(Boolean, nullable=False, default=False)
     password = Column(String(255), nullable=True)
     status = Column(Enum(DocumentStatusEnum), nullable=False, default=DocumentStatusEnum.PENDING)
+    is_whatsapp = Column(Boolean, nullable=False, default=False)
+    upload_by = Column(Boolean, nullable=False, default=False)
+    
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)
     updated_at = Column(DateTime, nullable=False, default=datetime.now)
     
     admin_user = relationship("AdminUserModel", backref="documents")
     category = relationship("CategoryModel", backref="documents")
+    parent = relationship("DocumentModel", remote_side=[id], backref="children")
     
 class ExtractedDataModel(Base):
     __tablename__ = "extracted_datas"
@@ -111,7 +116,7 @@ class EmailModel(Base):
     name = Column(String(100), nullable=False)
     email = Column(String(100), nullable=False)
     password = Column(String(255), nullable=False)
-    phone = Column(String(15), nullable=False)
+    phone = Column(String(15), nullable=True)
     admin_user_id = Column(String(36), ForeignKey("admin_users.id"), nullable=False)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False, default=datetime.now)

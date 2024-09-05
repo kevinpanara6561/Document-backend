@@ -98,12 +98,13 @@ def password_protect_pdf(file_content: bytes, password: str) -> bytes:
     return output.getvalue()
 
 def get_invoices(
+    admin_user_id: str,
     db: Session,
     start: int,
     limit: int,
-    invoice_id: Optional[str] = None
+    invoice_id: Optional[str] = None,
 ) -> schemas.InvoiceResponseList:
-    query = db.query(DocumentModel).filter(DocumentModel.is_deleted == False)
+    query = db.query(DocumentModel).filter(DocumentModel.is_deleted == False, DocumentModel.admin_user_id == admin_user_id)
 
     if invoice_id:
         query = query.filter(DocumentModel.id == invoice_id)
@@ -172,4 +173,3 @@ def get_documents(db: Session, admin_user_id: int) -> List[CategoryResponse]:
         ))
 
     return category_responses
-

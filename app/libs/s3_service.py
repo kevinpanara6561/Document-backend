@@ -42,7 +42,7 @@ def upload_file_to_s3(file_obj, bucket_name, object_name, content_type=None):
             Fileobj=file_obj,  # file_obj is now a file-like object
             Bucket=bucket_name,
             Key=object_name,
-            ExtraArgs={'ContentType': content_type}  # Preserve content type
+            ExtraArgs={'ContentType': content_type, 'ContentDisposition': "inline"}  # Preserve content type
         )
         
         # Construct and return the S3 URL

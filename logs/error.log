@@ -1,0 +1,130 @@
+[2024-09-05 17:46:57 +0000] [80575] [INFO] Handling signal: term
+[2024-09-05 17:46:57 +0000] [80585] [INFO] Shutting down
+[2024-09-05 17:46:57 +0000] [80585] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:46:57 +0000] [80584] [INFO] Shutting down
+[2024-09-05 17:46:57 +0000] [80583] [INFO] Shutting down
+[2024-09-05 17:46:57 +0000] [80584] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:46:57 +0000] [80583] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:46:57 +0000] [80584] [INFO] connection closed
+[2024-09-05 17:46:57 +0000] [80579] [INFO] Shutting down
+[2024-09-05 17:46:57 +0000] [80579] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:46:57 +0000] [80585] [INFO] Waiting for application shutdown.
+[2024-09-05 17:46:57 +0000] [80585] [INFO] Application shutdown complete.
+[2024-09-05 17:46:57 +0000] [80585] [INFO] Finished server process [80585]
+[2024-09-05 17:46:57 +0000] [80583] [INFO] Waiting for application shutdown.
+[2024-09-05 17:46:57 +0000] [80583] [INFO] Application shutdown complete.
+[2024-09-05 17:46:57 +0000] [80583] [INFO] Finished server process [80583]
+[2024-09-05 17:46:57 +0000] [80584] [INFO] Waiting for application shutdown.
+[2024-09-05 17:46:57 +0000] [80584] [INFO] Application shutdown complete.
+[2024-09-05 17:46:57 +0000] [80584] [INFO] Finished server process [80584]
+[2024-09-05 17:46:57 +0000] [80579] [INFO] Waiting for application shutdown.
+[2024-09-05 17:46:57 +0000] [80579] [INFO] Application shutdown complete.
+[2024-09-05 17:46:57 +0000] [80579] [INFO] Finished server process [80579]
+[2024-09-05 17:46:57 +0000] [80575] [ERROR] Worker (pid:80585) was sent SIGTERM!
+[2024-09-05 17:46:57 +0000] [80575] [ERROR] Worker (pid:80583) was sent SIGTERM!
+[2024-09-05 17:46:57 +0000] [80575] [ERROR] Worker (pid:80584) was sent SIGTERM!
+[2024-09-05 17:46:57 +0000] [80575] [ERROR] Worker (pid:80579) was sent SIGTERM!
+[2024-09-05 17:46:57 +0000] [80575] [INFO] Shutting down: Master
+[2024-09-05 17:46:57 +0000] [81607] [INFO] Starting gunicorn 23.0.0
+[2024-09-05 17:46:57 +0000] [81607] [INFO] Listening at: http://0.0.0.0:8000 (81607)
+[2024-09-05 17:46:57 +0000] [81607] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-09-05 17:46:57 +0000] [81610] [INFO] Booting worker with pid: 81610
+[2024-09-05 17:46:57 +0000] [81611] [INFO] Booting worker with pid: 81611
+[2024-09-05 17:46:57 +0000] [81612] [INFO] Booting worker with pid: 81612
+[2024-09-05 17:46:57 +0000] [81613] [INFO] Booting worker with pid: 81613
+[2024-09-05 17:46:59 +0000] [81610] [INFO] Started server process [81610]
+[2024-09-05 17:46:59 +0000] [81610] [INFO] Waiting for application startup.
+[2024-09-05 17:46:59 +0000] [81610] [INFO] Application startup complete.
+[2024-09-05 17:46:59 +0000] [81611] [INFO] Started server process [81611]
+[2024-09-05 17:46:59 +0000] [81611] [INFO] Waiting for application startup.
+[2024-09-05 17:46:59 +0000] [81611] [INFO] Application startup complete.
+[2024-09-05 17:46:59 +0000] [81612] [INFO] Started server process [81612]
+[2024-09-05 17:46:59 +0000] [81612] [INFO] Waiting for application startup.
+[2024-09-05 17:46:59 +0000] [81612] [INFO] Application startup complete.
+[2024-09-05 17:46:59 +0000] [81613] [INFO] Started server process [81613]
+[2024-09-05 17:46:59 +0000] [81613] [INFO] Waiting for application startup.
+[2024-09-05 17:46:59 +0000] [81613] [INFO] Application startup complete.
+[2024-09-05 17:47:02 +0000] [81613] [INFO] ('54.224.164.203', 35452) - "WebSocket /ws?host=server" [accepted]
+[2024-09-05 17:47:02 +0000] [81613] [INFO] connection open
+[2024-09-05 17:47:54 +0000] [81613] [INFO] connection closed
+[2024-09-05 17:48:16 +0000] [81613] [INFO] ('54.224.164.203', 56192) - "WebSocket /ws?host=server" [accepted]
+[2024-09-05 17:48:16 +0000] [81613] [INFO] connection open
+[2024-09-05 17:48:51 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:51 +0000] [81612] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:51 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81612] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81611] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81610] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:52 +0000] [81612] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81611] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81611] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:48:53 +0000] [81611] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:49:40 +0000] [81613] [INFO] connection closed
+[2024-09-05 17:49:54 +0000] [81613] [INFO] ('54.224.164.203', 48532) - "WebSocket /ws?host=server" [accepted]
+[2024-09-05 17:49:54 +0000] [81613] [INFO] connection open
+[2024-09-05 17:50:57 +0000] [81613] [WARNING] Invalid HTTP request received.
+[2024-09-05 17:54:03 +0000] [81607] [INFO] Handling signal: term
+[2024-09-05 17:54:03 +0000] [81611] [INFO] Shutting down
+[2024-09-05 17:54:03 +0000] [81611] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:54:03 +0000] [81612] [INFO] Shutting down
+[2024-09-05 17:54:03 +0000] [81613] [INFO] Shutting down
+[2024-09-05 17:54:03 +0000] [81612] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:54:03 +0000] [81613] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:54:03 +0000] [81613] [INFO] connection closed
+[2024-09-05 17:54:03 +0000] [81610] [INFO] Shutting down
+[2024-09-05 17:54:03 +0000] [81610] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2024-09-05 17:54:03 +0000] [81611] [INFO] Waiting for application shutdown.
+[2024-09-05 17:54:03 +0000] [81611] [INFO] Application shutdown complete.
+[2024-09-05 17:54:03 +0000] [81611] [INFO] Finished server process [81611]
+[2024-09-05 17:54:03 +0000] [81612] [INFO] Waiting for application shutdown.
+[2024-09-05 17:54:03 +0000] [81612] [INFO] Application shutdown complete.
+[2024-09-05 17:54:03 +0000] [81612] [INFO] Finished server process [81612]
+[2024-09-05 17:54:03 +0000] [81613] [INFO] Waiting for application shutdown.
+[2024-09-05 17:54:03 +0000] [81613] [INFO] Application shutdown complete.
+[2024-09-05 17:54:03 +0000] [81613] [INFO] Finished server process [81613]
+[2024-09-05 17:54:03 +0000] [81610] [INFO] Waiting for application shutdown.
+[2024-09-05 17:54:03 +0000] [81610] [INFO] Application shutdown complete.
+[2024-09-05 17:54:03 +0000] [81610] [INFO] Finished server process [81610]
+[2024-09-05 17:54:03 +0000] [81607] [ERROR] Worker (pid:81611) was sent SIGTERM!
+[2024-09-05 17:54:03 +0000] [81607] [ERROR] Worker (pid:81612) was sent SIGTERM!
+[2024-09-05 17:54:03 +0000] [81607] [ERROR] Worker (pid:81613) was sent SIGTERM!
+[2024-09-05 17:54:03 +0000] [81607] [ERROR] Worker (pid:81610) was sent SIGTERM!
+[2024-09-05 17:54:03 +0000] [81607] [INFO] Shutting down: Master
+[2024-09-05 17:54:03 +0000] [82750] [INFO] Starting gunicorn 23.0.0
+[2024-09-05 17:54:03 +0000] [82750] [INFO] Listening at: http://0.0.0.0:8000 (82750)
+[2024-09-05 17:54:03 +0000] [82750] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2024-09-05 17:54:03 +0000] [82753] [INFO] Booting worker with pid: 82753
+[2024-09-05 17:54:03 +0000] [82754] [INFO] Booting worker with pid: 82754
+[2024-09-05 17:54:03 +0000] [82755] [INFO] Booting worker with pid: 82755
+[2024-09-05 17:54:03 +0000] [82756] [INFO] Booting worker with pid: 82756
+[2024-09-05 17:54:05 +0000] [82753] [INFO] Started server process [82753]
+[2024-09-05 17:54:05 +0000] [82753] [INFO] Waiting for application startup.
+[2024-09-05 17:54:05 +0000] [82753] [INFO] Application startup complete.
+[2024-09-05 17:54:05 +0000] [82754] [INFO] Started server process [82754]
+[2024-09-05 17:54:05 +0000] [82754] [INFO] Waiting for application startup.
+[2024-09-05 17:54:05 +0000] [82754] [INFO] Application startup complete.
+[2024-09-05 17:54:05 +0000] [82755] [INFO] Started server process [82755]
+[2024-09-05 17:54:05 +0000] [82755] [INFO] Waiting for application startup.
+[2024-09-05 17:54:05 +0000] [82755] [INFO] Application startup complete.
+[2024-09-05 17:54:05 +0000] [82756] [INFO] Started server process [82756]
+[2024-09-05 17:54:05 +0000] [82756] [INFO] Waiting for application startup.
+[2024-09-05 17:54:05 +0000] [82756] [INFO] Application startup complete.
+[2024-09-05 17:54:08 +0000] [82756] [INFO] ('54.224.164.203', 51750) - "WebSocket /ws?host=server" [accepted]
+[2024-09-05 17:54:08 +0000] [82756] [INFO] connection open
+[2024-09-05 17:56:47 +0000] [82756] [INFO] connection closed

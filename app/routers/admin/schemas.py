@@ -1,9 +1,10 @@
 from datetime import date, datetime
+import json
 from typing import List, Optional
 
 from email_validator import EmailNotValidError, validate_email
 from fastapi import HTTPException, status
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, Json, validator
 
 
 class AdminUserChangePassword(BaseModel):
@@ -162,6 +163,22 @@ class CategoryResponse(BaseModel):
 class EmailCreateRequest(BaseModel):
     name: str
     email: str
-    phone: str
+    phone: Optional[str] = None
     password: str
     
+class DocumentResponse(BaseModel):
+    id: str
+    name: str
+    file_type: str
+    url: str
+    admin_user_id: str
+    
+    class Config:
+        orm_mode = True
+    
+class ExtreactData(BaseModel):
+    id: str
+    data: Json
+    
+    class Config:
+        orm_mode = True

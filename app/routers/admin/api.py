@@ -1,6 +1,9 @@
 from datetime import datetime, timedelta
 import logging
+import os
 from typing import List, Optional
+from botocore.exceptions import ClientError
+import boto3
 
 from fastapi import (
     APIRouter,
@@ -20,6 +23,8 @@ from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 
 from app.dependencies import get_db
+from app.libs.utils import generate_presigned_url
+from app.models import CategoryModel, DocumentModel, ExtractedDataModel
 from app.routers.admin import schemas
 from app.routers.admin.crud import (
     admin_users,
@@ -28,6 +33,9 @@ from app.routers.admin.crud import (
     whatsapp
 )
 from fastapi.responses import HTMLResponse
+from dotenv import load_dotenv
+
+load_dotenv()
 
 router = APIRouter()
 
@@ -191,10 +199,10 @@ def list_invoices(
     start: int = Query(0, ge=0),
     limit: int = Query(10, ge=1)
 ):
-    admin_users.verify_token(db, token=token)
+    admin_user = admin_users.verify_token(db, token=token)
     
     # Fetch invoices with pagination
-    paginated_invoices = invoices.get_invoices(db, start=start, limit=limit)
+    paginated_invoices = invoices.get_invoices(admin_user.id, db, start=start, limit=limit)
     return paginated_invoices
 
 @router.get("/documents", response_model=List[schemas.CategoryResponse], tags=['Documents'])
@@ -234,3 +242,157 @@ def add_email(
     admin_user = admin_users.verify_token(db=db, token=token)
     data = emails.add_email(request=request, db=db, admin_user_id=admin_user.id)
     return {'message':"Email added successfully"}
+
+# @router.get("/emails", tags=["Email"])
+# def get_emails(
+#     request: schemas.EmailCreateRequest,
+#     token: str = Header(None),
+#     db: Session = Depends(get_db),
+#     ):
+#     admin_user = admin_users.verify_token(db=db, token=token)
+#     data = emails.add_email(request=request, db=db, admin_user_id=admin_user.id)
+#     return {'message':"Email added successfully"}
+
+
+@router.get("/documents/{document_id}", response_model=schemas.DocumentResponse, tags=['Documents'])
+def get_document_by_id(
+    document_id: str,
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+):
+    # Verify the admin user token
+    admin_user = admin_users.verify_token(db, token=token)
+    # admin_user_id = admin_user.id
+
+    # Fetch the document from the database
+    document = db.query(DocumentModel).filter(
+        DocumentModel.id == document_id,
+        DocumentModel.is_deleted == False,
+    ).first()
+
+    # If the document is not found, raise a 404 error
+    if not document:
+        raise HTTPException(status_code=404, detail="Document not found")
+
+    # Generate a presigned URL for the document's file in S3
+    presigned_url = generate_presigned_url(document.file_path)
+
+    # Create a response model to return
+    document_response = schemas.DocumentResponse(
+        id=document.id,
+        name=document.name,
+        file_type=document.file_type,
+        url=presigned_url,
+        admin_user_id=document.admin_user_id
+    )
+
+    return document_response
+
+@router.get("/documents/{document_id}/extreact-data", response_model=schemas.ExtreactData, tags=['Documents'])
+def get_extreact_data(
+    document_id: str,
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+):
+    # Verify the admin user token
+    admin_user = admin_users.verify_token(db, token=token)
+    if not admin_user:
+        raise HTTPException(status_code=401, detail="Unauthorized access")
+
+    # Fetch extracted data by document_id
+    extreact_data = db.query(ExtractedDataModel).filter_by(document_id=document_id, is_deleted=False).first()
+
+    if not extreact_data:
+        raise HTTPException(status_code=404, detail="Extracted data not found")
+
+    return extreact_data
+
+@router.get("/dashboard")
+def get_dashboard_count(
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+):
+    admin_user = admin_users.verify_token(db, token=token)
+    if not admin_user:
+        raise HTTPException(status_code=401, detail="Unauthorized access")
+    db_document = db.query(DocumentModel).filter(DocumentModel.admin_user_id == admin_user.id).first()
+    
+
+# Initialize the S3 client
+s3_client = boto3.client('s3')
+
+@router.delete("/documents/{document_id}", tags=["Documents"])
+def delete_document(
+    document_id: str,
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+):
+    admin_user = admin_users.verify_token(db, token=token)
+    
+    db_document = db.query(DocumentModel).filter(
+        DocumentModel.id == document_id, 
+        DocumentModel.is_deleted == False
+    ).first()
+    
+    if not db_document:
+        raise HTTPException(status_code=404, detail="Document not found")
+    
+    s3_file_key = db_document.file_path
+    s3_bucket_name = os.getenv("AWS_BUCKET")
+    
+    try:
+        s3_client.delete_object(Bucket=s3_bucket_name, Key=s3_file_key)
+        
+        db.delete(db_document)
+        db.commit()
+        
+        return {"message": "Document and associated S3 file deleted successfully"}
+    
+    except ClientError as e:
+        raise HTTPException(status_code=500, detail=f"Failed to delete S3 file: {e}")
+    
+
+@router.delete("/categories/{category_id}", tags=["Categories"])
+def delete_category(
+    category_id: str,
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+):
+    admin_user = admin_users.verify_token(db, token=token)
+    
+    db_category = db.query(CategoryModel).filter(
+        CategoryModel.id == category_id, 
+        CategoryModel.is_deleted == False
+    ).first()
+    
+    if not db_category:
+        raise HTTPException(status_code=404, detail="Category not found")
+    
+    db_sub_categories = db.query(CategoryModel).filter(CategoryModel.parent_id == category_id).all()
+    for db_sub_category in db_sub_categories:
+        db_documents = db.query(DocumentModel).filter(DocumentModel.category_id == db_sub_category.id).all()
+        for db_document in db_documents:
+            db_extreacted_datas = db.query(ExtractedDataModel).filter(ExtractedDataModel.document_id == db_document.id).all()
+            for db_extreacted_data in db_extreacted_datas:
+                db.delete(db_extreacted_data)
+                db.commit()
+                
+            db.delete(db_document)
+            db.commit()
+            
+            s3_file_key = db_document.file_path
+            s3_bucket_name = os.getenv("AWS_BUCKET")
+            
+            try:
+                s3_client.delete_object(Bucket=s3_bucket_name, Key=s3_file_key)
+            except ClientError as e:
+                raise HTTPException(status_code=500, detail=f"Failed to delete S3 file: {e}")
+            
+        db.delete(db_sub_category)
+        db.commit()
+    
+    db.delete(db_category)
+    db.commit()
+    
+    return {"message": "Category and associated records deleted successfully"}
+
