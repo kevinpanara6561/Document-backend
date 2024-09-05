@@ -312,10 +312,35 @@ def get_dashboard_count(
     token: str = Header(None),
     db: Session = Depends(get_db),
 ):
+    # Verify admin user from token
     admin_user = admin_users.verify_token(db, token=token)
-    if not admin_user:
-        raise HTTPException(status_code=401, detail="Unauthorized access")
-    db_document = db.query(DocumentModel).filter(DocumentModel.admin_user_id == admin_user.id).first()
+
+    # Query to count total documents for the admin user
+    total_documents = db.query(DocumentModel).filter(DocumentModel.admin_user_id == admin_user.id).count()
+
+    # Join DocumentModel with CategoryModel and classify based on the category name
+    classified_count = (
+        db.query(DocumentModel)
+        .join(CategoryModel, DocumentModel.category_id == CategoryModel.id)
+        .filter(DocumentModel.admin_user_id == admin_user.id)
+        .filter(CategoryModel.name != "Other")
+        .count()
+    )
+
+    unclassified_count = (
+        db.query(DocumentModel)
+        .join(CategoryModel, DocumentModel.category_id == CategoryModel.id)
+        .filter(DocumentModel.admin_user_id == admin_user.id)
+        .filter(CategoryModel.name == "Other")
+        .count()
+    )
+
+    # Return the result as a JSON response
+    return {
+        "total_documents": total_documents,
+        "classified_document": classified_count,
+        "unclassified_document": unclassified_count,
+    }
     
 
 # Initialize the S3 client

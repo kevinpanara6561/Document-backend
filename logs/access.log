@@ -157,3 +157,132 @@
 106.205.234.144:0 - "DELETE /categories/341dcac0-565e-468c-9332-bf92ab22878e HTTP/1.0" 404
 106.205.234.144:0 - "DELETE /categories/3f8b2b3e-78af-4a42-8871-f32f142aebf6 HTTP/1.0" 200
 106.205.234.144:0 - "DELETE /categories/7c68d0af-f8d5-4096-bfd0-b056b788e681 HTTP/1.0" 200
+2024-09-05 18:06:48 - root - INFO - path: server
+2024-09-05 18:06:48 - root - INFO - websocket message
+2024-09-05 18:06:48 - root - INFO - in try
+54.189.78.117:0 - "GET / HTTP/1.0" 404
+2024-09-05 18:09:51 - root - INFO - Client disconnected from host: server
+2024-09-05 18:09:56 - root - INFO - path: server
+2024-09-05 18:09:56 - root - INFO - websocket message
+2024-09-05 18:09:56 - root - INFO - in try
+2024-09-05 18:10:19 - root - INFO - Received data: {"category": "Other", "sub_category": "Resume", "status": "CLASSIFIED", "template": "classification", "document_id": "c33c98a2-e2a1-4168-bdb7-873f54854ca5", "admin_user_id": "b23b3cdf-f755-4c89-8792-a27258888cf1", "parent_id": null}
+2024-09-05 18:10:19 - root - INFO - Parsed JSON data: {'category': 'Other', 'sub_category': 'Resume', 'status': 'CLASSIFIED', 'template': 'classification', 'document_id': 'c33c98a2-e2a1-4168-bdb7-873f54854ca5', 'admin_user_id': 'b23b3cdf-f755-4c89-8792-a27258888cf1', 'parent_id': None}
+2024-09-05 18:10:20 - root - INFO - in whatsapp try
+27.97.222.14:0 - "GET /docs HTTP/1.0" 200
+27.97.222.14:0 - "GET /openapi.json HTTP/1.0" 200
+106.205.234.144:0 - "GET /docs HTTP/1.0" 200
+106.205.234.144:0 - "GET /openapi.json HTTP/1.0" 200
+27.97.222.14:0 - "OPTIONS /login HTTP/1.0" 200
+27.97.222.14:0 - "POST /login HTTP/1.0" 200
+2024-09-05 18:11:14 - root - INFO - path: local
+2024-09-05 18:11:14 - root - INFO - websocket message
+2024-09-05 18:11:14 - root - INFO - in try
+2024-09-05 18:11:15 - root - INFO - path: local
+2024-09-05 18:11:15 - root - INFO - websocket message
+2024-09-05 18:11:15 - root - INFO - in try
+27.97.222.14:0 - "OPTIONS /documents HTTP/1.0" 200
+27.97.222.14:0 - "OPTIONS /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+106.205.234.144:0 - "GET /dashboard HTTP/1.0" 200
+27.97.222.14:0 - "OPTIONS /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "OPTIONS /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "OPTIONS /upload-invoice HTTP/1.0" 200
+2024-09-05 18:11:41 - root - INFO - file_name: ticket
+2024-09-05 18:11:41 - root - INFO - file_extension: .jpg
+2024-09-05 18:11:41 - root - INFO - file_name: new resume
+2024-09-05 18:11:41 - root - INFO - file_extension: .jpg
+27.97.222.14:0 - "POST /upload-invoice HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+2024-09-05 18:11:42 - root - INFO - Received data: {"extract_data": {"Name": "KEVIN PANARA", "Designation": "MECHANICAL ENGINEER (B.E.)", "Education": [{"Degree": "B.E. \u2013 MECHANICAL (CGPA \u2013 7.11)", "Institution": "Government Engineering College \u2013 Bhuj.", "University": "Gujarat Technological University", "Duration": "2016-2020"}, {"Degree": "HSC (60.20%)", "Institution": "Gujarat State Higher Secondary Education Board Life Links Vidhyalaya , Tankara", "Duration": "2014-2016"}, {"Degree": "SSC(82.00%)", "Institution": "Gujarat State Education Board Life Links Vidhyalaya , Tankara", "Duration": "2013-2014"}], "Objective": "I seek challenging opportunities where I can fully use my skills for the success of the organization.", "Contact Information": {"Village": "Jasapar", "Taluka": "Jodiya", "District": "Jamnagar", "Pincode": "361220", "Phone Number": "+91 9849570623", "Email": "kevinpanara6561@gmail.com", "LinkedIn": "http://www.linkedin.com/in/kevin-panara-24048517a"}, "Industrial Training": [{"Organization": "Satani Forge and Turn, Rajkot", "Duration": "10 Days"}, {"Organization": "GSECL Thermal Power Station, Sikka", "Duration": "6 Days"}], "Skills": ["Ms office", "Communication skill", "Fast learner", "Leadership", "Travelling", "Playing Cricket", "Listening to Music", "HTML", "CSS", "PYTHON", "NUMPY", "PANDAS", "MATPLOTLIB", "SEABORN", "FASTAPI", "FLASK", "DJANGO", "MYSQL", "TABLEAU", "MACHINE LEARNING", "PHP", "NODE.JS", "JAVASCRIPT", "AWS"], "Hobbies": ["Travelling", "Playing Cricket", "Listening to Music"], "Project Experience": [{"Project Name": "Built hydraulic automatic jack", "Description": "Sample superstore data visualization", "Location": "Rajkot", "Duration": "Work duration : 15 Feb 2021 to 28 Feb 2022"}, {"Project Name": "Ship data visualization", "Description": "", "Location": "Rajkot", "Duration": "Work duration : 04 Feb 2022 to 04 Aug 2022"}, {"Project Name": "Data analyst intern", "Description": "", "Location": "Rajkot", "Duration": "Work duration : 06 Oct 2022 to Present"}], "Work Experience": [{"Organization": "Rolex Rings Limited [ RRL]", "Position": "Graduation Engineering Trainee (QA Engineer)", "Location": "Rajkot", "Duration": "Work duration : 15 Feb 2021 to 28 Feb 2022"}, {"Organization": "Bytesbizz Technology", "Position": "Data analyst intern", "Location": "Rajkot", "Duration": "Work duration : 04 Feb 2022 to 04 Aug 2022"}, {"Organization": "Aeonx Digital Solutions", "Position": "Executive Developer", "Location": "Bhuj", "Duration": "Work duration : 06 Oct 2022 to Present"}], "Personal Details": {"Date of Birth": "24th March, 1999", "Marital Status": "Unmarried", "Gender": "Male", "Languages": "Gujarati, Hindi, English", "Certificate": "AWS Cloud Practitioner"}}, "status": "COMPLETED", "template": "extract_data", "document_id": "c33c98a2-e2a1-4168-bdb7-873f54854ca5", "admin_user_id": "b23b3cdf-f755-4c89-8792-a27258888cf1"}
+2024-09-05 18:11:42 - root - INFO - Parsed JSON data: {'extract_data': {'Name': 'KEVIN PANARA', 'Designation': 'MECHANICAL ENGINEER (B.E.)', 'Education': [{'Degree': 'B.E. – MECHANICAL (CGPA – 7.11)', 'Institution': 'Government Engineering College – Bhuj.', 'University': 'Gujarat Technological University', 'Duration': '2016-2020'}, {'Degree': 'HSC (60.20%)', 'Institution': 'Gujarat State Higher Secondary Education Board Life Links Vidhyalaya , Tankara', 'Duration': '2014-2016'}, {'Degree': 'SSC(82.00%)', 'Institution': 'Gujarat State Education Board Life Links Vidhyalaya , Tankara', 'Duration': '2013-2014'}], 'Objective': 'I seek challenging opportunities where I can fully use my skills for the success of the organization.', 'Contact Information': {'Village': 'Jasapar', 'Taluka': 'Jodiya', 'District': 'Jamnagar', 'Pincode': '361220', 'Phone Number': '+91 9849570623', 'Email': 'kevinpanara6561@gmail.com', 'LinkedIn': 'http://www.linkedin.com/in/kevin-panara-24048517a'}, 'Industrial Training': [{'Organization': 'Satani Forge and Turn, Rajkot', 'Duration': '10 Days'}, {'Organization': 'GSECL Thermal Power Station, Sikka', 'Duration': '6 Days'}], 'Skills': ['Ms office', 'Communication skill', 'Fast learner', 'Leadership', 'Travelling', 'Playing Cricket', 'Listening to Music', 'HTML', 'CSS', 'PYTHON', 'NUMPY', 'PANDAS', 'MATPLOTLIB', 'SEABORN', 'FASTAPI', 'FLASK', 'DJANGO', 'MYSQL', 'TABLEAU', 'MACHINE LEARNING', 'PHP', 'NODE.JS', 'JAVASCRIPT', 'AWS'], 'Hobbies': ['Travelling', 'Playing Cricket', 'Listening to Music'], 'Project Experience': [{'Project Name': 'Built hydraulic automatic jack', 'Description': 'Sample superstore data visualization', 'Location': 'Rajkot', 'Duration': 'Work duration : 15 Feb 2021 to 28 Feb 2022'}, {'Project Name': 'Ship data visualization', 'Description': '', 'Location': 'Rajkot', 'Duration': 'Work duration : 04 Feb 2022 to 04 Aug 2022'}, {'Project Name': 'Data analyst intern', 'Description': '', 'Location': 'Rajkot', 'Duration': 'Work duration : 06 Oct 2022 to Present'}], 'Work Experience': [{'Organization': 'Rolex Rings Limited [ RRL]', 'Position': 'Graduation Engineering Trainee (QA Engineer)', 'Location': 'Rajkot', 'Duration': 'Work duration : 15 Feb 2021 to 28 Feb 2022'}, {'Organization': 'Bytesbizz Technology', 'Position': 'Data analyst intern', 'Location': 'Rajkot', 'Duration': 'Work duration : 04 Feb 2022 to 04 Aug 2022'}, {'Organization': 'Aeonx Digital Solutions', 'Position': 'Executive Developer', 'Location': 'Bhuj', 'Duration': 'Work duration : 06 Oct 2022 to Present'}], 'Personal Details': {'Date of Birth': '24th March, 1999', 'Marital Status': 'Unmarried', 'Gender': 'Male', 'Languages': 'Gujarati, Hindi, English', 'Certificate': 'AWS Cloud Practitioner'}}, 'status': 'COMPLETED', 'template': 'extract_data', 'document_id': 'c33c98a2-e2a1-4168-bdb7-873f54854ca5', 'admin_user_id': 'b23b3cdf-f755-4c89-8792-a27258888cf1'}
+2024-09-05 18:11:43 - root - INFO - Message sent successfully.
+2024-09-05 18:11:43 - root - INFO - Sending data to local client: {"extract_data": {"Name": "KEVIN PANARA", "Designation": "MECHANICAL ENGINEER (B.E.)", "Education": [{"Degree": "B.E. \u2013 MECHANICAL (CGPA \u2013 7.11)", "Institution": "Government Engineering College \u2013 Bhuj.", "University": "Gujarat Technological University", "Duration": "2016-2020"}, {"Degree": "HSC (60.20%)", "Institution": "Gujarat State Higher Secondary Education Board Life Links Vidhyalaya , Tankara", "Duration": "2014-2016"}, {"Degree": "SSC(82.00%)", "Institution": "Gujarat State Education Board Life Links Vidhyalaya , Tankara", "Duration": "2013-2014"}], "Objective": "I seek challenging opportunities where I can fully use my skills for the success of the organization.", "Contact Information": {"Village": "Jasapar", "Taluka": "Jodiya", "District": "Jamnagar", "Pincode": "361220", "Phone Number": "+91 9849570623", "Email": "kevinpanara6561@gmail.com", "LinkedIn": "http://www.linkedin.com/in/kevin-panara-24048517a"}, "Industrial Training": [{"Organization": "Satani Forge and Turn, Rajkot", "Duration": "10 Days"}, {"Organization": "GSECL Thermal Power Station, Sikka", "Duration": "6 Days"}], "Skills": ["Ms office", "Communication skill", "Fast learner", "Leadership", "Travelling", "Playing Cricket", "Listening to Music", "HTML", "CSS", "PYTHON", "NUMPY", "PANDAS", "MATPLOTLIB", "SEABORN", "FASTAPI", "FLASK", "DJANGO", "MYSQL", "TABLEAU", "MACHINE LEARNING", "PHP", "NODE.JS", "JAVASCRIPT", "AWS"], "Hobbies": ["Travelling", "Playing Cricket", "Listening to Music"], "Project Experience": [{"Project Name": "Built hydraulic automatic jack", "Description": "Sample superstore data visualization", "Location": "Rajkot", "Duration": "Work duration : 15 Feb 2021 to 28 Feb 2022"}, {"Project Name": "Ship data visualization", "Description": "", "Location": "Rajkot", "Duration": "Work duration : 04 Feb 2022 to 04 Aug 2022"}, {"Project Name": "Data analyst intern", "Description": "", "Location": "Rajkot", "Duration": "Work duration : 06 Oct 2022 to Present"}], "Work Experience": [{"Organization": "Rolex Rings Limited [ RRL]", "Position": "Graduation Engineering Trainee (QA Engineer)", "Location": "Rajkot", "Duration": "Work duration : 15 Feb 2021 to 28 Feb 2022"}, {"Organization": "Bytesbizz Technology", "Position": "Data analyst intern", "Location": "Rajkot", "Duration": "Work duration : 04 Feb 2022 to 04 Aug 2022"}, {"Organization": "Aeonx Digital Solutions", "Position": "Executive Developer", "Location": "Bhuj", "Duration": "Work duration : 06 Oct 2022 to Present"}], "Personal Details": {"Date of Birth": "24th March, 1999", "Marital Status": "Unmarried", "Gender": "Male", "Languages": "Gujarati, Hindi, English", "Certificate": "AWS Cloud Practitioner"}}, "status": "COMPLETED", "template": "extract_data", "document_id": "c33c98a2-e2a1-4168-bdb7-873f54854ca5", "admin_user_id": "b23b3cdf-f755-4c89-8792-a27258888cf1"}
+2024-09-05 18:11:44 - root - INFO - Received data: {'object': 'whatsapp_business_account', 'entry': [{'id': '393119137222310', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '15556205000', 'phone_number_id': '428465567010253'}, 'statuses': [{'id': 'wamid.HBgMOTE2MzU0NTg5Njc0FQIAERgSRTY3QzkyRDNEQjAyQ0E5QjNBAA==', 'status': 'sent', 'timestamp': '1725559904', 'recipient_id': '916354589674', 'conversation': {'id': 'b9a0c95ca1e37e3d3948af79cb5deb4a', 'expiration_timestamp': '1725646320', 'origin': {'type': 'service'}}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+69.171.251.14:0 - "POST /receive-message-whatsapp HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:11:45 - root - INFO - Received data: {'object': 'whatsapp_business_account', 'entry': [{'id': '393119137222310', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '15556205000', 'phone_number_id': '428465567010253'}, 'statuses': [{'id': 'wamid.HBgMOTE2MzU0NTg5Njc0FQIAERgSRTY3QzkyRDNEQjAyQ0E5QjNBAA==', 'status': 'delivered', 'timestamp': '1725559905', 'recipient_id': '916354589674', 'conversation': {'id': 'b9a0c95ca1e37e3d3948af79cb5deb4a', 'origin': {'type': 'service'}}, 'pricing': {'billable': True, 'pricing_model': 'CBP', 'category': 'service'}}]}, 'field': 'messages'}]}]}
+69.171.251.3:0 - "POST /receive-message-whatsapp HTTP/1.0" 200
+2024-09-05 18:11:46 - root - INFO - Client disconnected from host: local
+2024-09-05 18:11:46 - root - INFO - Client disconnected from host: local
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:11:47 - root - INFO - path: local
+2024-09-05 18:11:47 - root - INFO - websocket message
+2024-09-05 18:11:47 - root - INFO - in try
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:11:47 - root - INFO - path: local
+2024-09-05 18:11:47 - root - INFO - websocket message
+2024-09-05 18:11:47 - root - INFO - in try
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:11:53 - root - INFO - Received data: {"category": "Transport", "sub_category": "Train Ticket", "status": "CLASSIFIED", "template": "classification", "document_id": "307c8c16-62ce-4b02-ac17-8a722e3cc89d", "admin_user_id": "438f0b1a-c170-4df3-a34b-acc0af6d843f"}
+2024-09-05 18:11:53 - root - INFO - Parsed JSON data: {'category': 'Transport', 'sub_category': 'Train Ticket', 'status': 'CLASSIFIED', 'template': 'classification', 'document_id': '307c8c16-62ce-4b02-ac17-8a722e3cc89d', 'admin_user_id': '438f0b1a-c170-4df3-a34b-acc0af6d843f'}
+2024-09-05 18:11:55 - root - INFO - Received data: {'object': 'whatsapp_business_account', 'entry': [{'id': '393119137222310', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '15556205000', 'phone_number_id': '428465567010253'}, 'statuses': [{'id': 'wamid.HBgMOTE2MzU0NTg5Njc0FQIAERgSRTY3QzkyRDNEQjAyQ0E5QjNBAA==', 'status': 'read', 'timestamp': '1725559915', 'recipient_id': '916354589674'}]}, 'field': 'messages'}]}]}
+173.252.95.115:0 - "POST /receive-message-whatsapp HTTP/1.0" 200
+2024-09-05 18:11:58 - root - INFO - path: server
+2024-09-05 18:11:58 - root - INFO - websocket message
+2024-09-05 18:11:58 - root - INFO - in try
+2024-09-05 18:12:01 - root - INFO - Client disconnected from host: local
+2024-09-05 18:12:01 - root - INFO - Client disconnected from host: local
+2024-09-05 18:12:01 - root - INFO - Client disconnected from host: server
+2024-09-05 18:12:06 - root - INFO - path: server
+2024-09-05 18:12:06 - root - INFO - websocket message
+2024-09-05 18:12:06 - root - INFO - in try
+106.205.234.144:0 - "GET /dashboard HTTP/1.0" 200
+2024-09-05 18:12:25 - root - INFO - Client disconnected from host: server
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:12:34 - root - INFO - path: server
+2024-09-05 18:12:34 - root - INFO - websocket message
+2024-09-05 18:12:34 - root - INFO - in try
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:12:34 - root - INFO - path: local
+2024-09-05 18:12:34 - root - INFO - websocket message
+2024-09-05 18:12:34 - root - INFO - in try
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:12:35 - root - INFO - path: local
+2024-09-05 18:12:35 - root - INFO - websocket message
+2024-09-05 18:12:35 - root - INFO - in try
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /invoices?start=0&limit=12 HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:12:59 - root - INFO - Client disconnected from host: local
+2024-09-05 18:12:59 - root - INFO - Client disconnected from host: local
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:12:59 - root - INFO - path: local
+2024-09-05 18:12:59 - root - INFO - websocket message
+2024-09-05 18:12:59 - root - INFO - in try
+27.97.222.14:0 - "GET /documents HTTP/1.0" 200
+2024-09-05 18:13:00 - root - INFO - path: local
+2024-09-05 18:13:00 - root - INFO - websocket message
+2024-09-05 18:13:00 - root - INFO - in try
+2024-09-05 18:13:13 - root - INFO - Received data: {'object': 'whatsapp_business_account', 'entry': [{'id': '393119137222310', 'changes': [{'value': {'messaging_product': 'whatsapp', 'metadata': {'display_phone_number': '15556205000', 'phone_number_id': '428465567010253'}, 'contacts': [{'profile': {'name': '@$|-|¡$|-|  ₱@Π@®@'}, 'wa_id': '916354589674'}], 'messages': [{'from': '916354589674', 'id': 'wamid.HBgMOTE2MzU0NTg5Njc0FQIAEhgWM0VCMDAzMUVGRjFGNzE0QzBGMEI2QQA=', 'timestamp': '1725559991', 'type': 'document', 'document': {'caption': 'kevin_resume.pdf', 'filename': 'kevin_resume.pdf', 'mime_type': 'application/pdf', 'sha256': 'OVcUIpKAdsMWzy6ngQ02IrDXAJN6JjIsRr/Fp7QDhuE=', 'id': '8549127261772898'}}]}, 'field': 'messages'}]}]}
+2024-09-05 18:13:13 - root - INFO - message_type: document
+2024-09-05 18:13:13 - root - INFO - message: {'from': '916354589674', 'id': 'wamid.HBgMOTE2MzU0NTg5Njc0FQIAEhgWM0VCMDAzMUVGRjFGNzE0QzBGMEI2QQA=', 'timestamp': '1725559991', 'type': 'document', 'document': {'caption': 'kevin_resume.pdf', 'filename': 'kevin_resume.pdf', 'mime_type': 'application/pdf', 'sha256': 'OVcUIpKAdsMWzy6ngQ02IrDXAJN6JjIsRr/Fp7QDhuE=', 'id': '8549127261772898'}}
+2024-09-05 18:13:13 - root - INFO - Received document: kevin_resume.pdf (Type: application/pdf)
+2024-09-05 18:13:13 - root - INFO - file_name: kevin_resume
+2024-09-05 18:13:13 - root - INFO - file_extension: .pdf
+2024-09-05 18:13:13 - root - INFO - original_file_name: kevin_resume(1).pdf
+2024-09-05 18:13:14 - root - INFO - File kevin_resume(1).pdf saved to S3 in 'invoices' folder successfully
+2024-09-05 18:13:14 - root - INFO - file_name: kevin_resume
+2024-09-05 18:13:14 - root - INFO - file_extension: .pdf
+2024-09-05 18:13:14 - root - INFO - original_file_name: kevin_resume(1).pdf
+2024-09-05 18:13:14 - root - INFO - whatsapp document add: 911b555c-74de-4cc5-85f0-dcef89a0f2b4
+2024-09-05 18:13:14 - root - INFO - Document kevin_resume(1).pdf saved in the database
+173.252.79.10:0 - "POST /receive-message-whatsapp HTTP/1.0" 200
