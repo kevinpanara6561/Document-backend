@@ -182,3 +182,14 @@ class ExtreactData(BaseModel):
     
     class Config:
         orm_mode = True
+        
+class EmailResponse(BaseModel):
+    id: str
+    name: str
+    email: str
+    phone: Optional[str] = None
+    
+    class Config:
+        orm_mode = True
+    
+    

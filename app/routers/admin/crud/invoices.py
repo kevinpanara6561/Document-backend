@@ -104,7 +104,7 @@ def get_invoices(
     limit: int,
     invoice_id: Optional[str] = None,
 ) -> schemas.InvoiceResponseList:
-    query = db.query(DocumentModel).filter(DocumentModel.is_deleted == False, DocumentModel.admin_user_id == admin_user_id)
+    query = db.query(DocumentModel).filter(DocumentModel.is_deleted == False, DocumentModel.admin_user_id == admin_user_id, DocumentModel.parent_id == None)
 
     if invoice_id:
         query = query.filter(DocumentModel.id == invoice_id)
@@ -131,7 +131,7 @@ def get_documents(db: Session, admin_user_id: int) -> List[CategoryResponse]:
     categories = db.query(CategoryModel).filter(
         CategoryModel.parent_id == None,
         CategoryModel.is_deleted == False,
-        CategoryModel.admin_user_id == admin_user_id
+        CategoryModel.admin_user_id == admin_user_id,
     ).all()
     
     category_responses = []

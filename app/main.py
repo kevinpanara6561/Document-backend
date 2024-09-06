@@ -16,7 +16,7 @@ from app.routers.admin import api as admin
 from app.routers.admin.crud.whatsapp import send_classification_template, send_extract_data_as_excel
 
 app = FastAPI(
-    title="DocumentX",
+    title="DocuLens",
     description="APIs for DocuX",
     version="1.0.0",
     # docs_url=None,
@@ -174,8 +174,6 @@ async def websocket_endpoint(websocket: WebSocket):
                 db_session.refresh(new_data)
                 
                 try:
-                    logging.info("in whatsapp try")
-                    # db_document = db_session.query(DocumentModel).filter(DocumentModel.id == json_data['document_id'], DocumentModel.admin_user_id == json_data['admin_user_id'], DocumentModel.is_deleted == False).first()
                     if db_document.is_whatsapp == True:
                         send_classification_template(db_admin_user.phone, json_data['sub_category'], json_data['category'], json_data['sub_category'])
                 except Exception as e:
@@ -184,7 +182,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 for conn in socket:
                     if conn.query_params.get("host", "default_host") == "local":
                         logging.info(f"Sending data to local client: {data}")
-                        await conn.send_text(f"Message text was: {data}")
+                        await conn.send_json(json_data)
                         
                         
             else:
@@ -198,7 +196,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 for conn in socket:
                     if conn.query_params.get("host", "default_host") == "local":
                         logging.info(f"Sending data to local client: {data}")
-                        await conn.send_text(f"Message text was: {data}")
+                        await conn.send_json(json_data)
                         
                 db_exreact_data = db_session.query(ExtractedDataModel).filter(ExtractedDataModel.document_id == json_data['document_id']).first()
                 

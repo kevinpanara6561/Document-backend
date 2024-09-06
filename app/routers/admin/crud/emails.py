@@ -28,3 +28,7 @@ def add_email(request: EmailCreateRequest, db: Session, admin_user_id: str):
     db.refresh(new_email)
     
     return new_email
+
+def get_emails(db: Session, admin_user_id: str):
+    data = db.query(EmailModel).filter(EmailModel.admin_user_id == admin_user_id).all()
+    return data

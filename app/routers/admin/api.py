@@ -243,15 +243,14 @@ def add_email(
     data = emails.add_email(request=request, db=db, admin_user_id=admin_user.id)
     return {'message':"Email added successfully"}
 
-# @router.get("/emails", tags=["Email"])
-# def get_emails(
-#     request: schemas.EmailCreateRequest,
-#     token: str = Header(None),
-#     db: Session = Depends(get_db),
-#     ):
-#     admin_user = admin_users.verify_token(db=db, token=token)
-#     data = emails.add_email(request=request, db=db, admin_user_id=admin_user.id)
-#     return {'message':"Email added successfully"}
+@router.get("/emails", tags=["Email"], response_model=schemas.EmailResponse)
+def get_emails(
+    token: str = Header(None),
+    db: Session = Depends(get_db),
+    ):
+    admin_user = admin_users.verify_token(db=db, token=token)
+    data = emails.get_emails(db=db, admin_user_id=admin_user.id)
+    return data
 
 
 @router.get("/documents/{document_id}", response_model=schemas.DocumentResponse, tags=['Documents'])
